@@ -1,116 +1,36 @@
-					</div>
-				</section>
-			</div>
-			<footer class="main-footer" style="min-height: 200px;"> 
-				<div class="col-md-3 hidden-xs">
-					<i class="fa fa-home"></i> Liên Kết Trang
-					<ul>
-						<li><a href="/">Trang chủ</a></li>
-						<li><a href="https://youtu.be/R7osfwJzGVY" target="_blank">Hướng dẫn</a></li>
-						<li><a href="../gioi-thieu.html" target="_blank">Giới thiệu</a></li>
-						<li><a href="https://www.facebook.com/messages/100006716972752" target="_blank">Liên Hệ</a></li>
-					</ul>
-					<i class="fa fa-link"></i> Liên Kết Site
-					<ul>
-						<li><a href="https://www.facebook.com/100006716972752" target="_blank">Facebook</a></li>
-						<li><a href="https://www.youtube.com/channel/UC2dJqhGjElzmO9fsV6tLQDA" target="_blank">Youtube</a></li>
-					</ul>
-				</div>
-				<div class="col-md-6">
-					<center>
-						<div style="text-align:center">
-							<p><b>HOTLIKE.NET<br>Hệ Thống Auto Like, Bot Like, Boom Like, Sim Simi Hiện Đại Nhất Hiện Nay</b></p>
-							<div>
-								<a><i class="fa fa-twitter-square" style="font-size:36px;color:#000000"></i></a> &nbsp;&nbsp;
-								<a><i class="fa fa-facebook-square" style="font-size:36px;color:#000000"></i></a> &nbsp;&nbsp;
-								<a><i class="fa fa-google-plus-square" style="font-size:36px;color:#000000"></i></a> &nbsp;&nbsp;
-								<a><i class="fa fa-youtube-square" style="font-size:36px;color:#000000"></i></a><br>
-								<small>Development By <i class="fa fa-paper-plane-o"></i> HDPro.</small><br>
-								<small>© 2016 HOT-LIKE.NET</small>
-							</div>
-						</div>
-					</center>
-				</div>
-			</footer>
-			<aside class="control-sidebar control-sidebar-light" style="-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;">
-				<ul class="nav nav-tabs tab-border-top-success">
-					<li class="active"><a data-toggle="tab" href="#tabinfo"><i class="fa fa-info-circle fa-fw"></i></a></li>
-					<li class=""><a data-toggle="tab" href="#tablanguage"><i class="fa fa-cogs"></i></a></li>
-				</ul>
-				<div class="tab-content">
-					<div id="tabinfo" class="tab-pane active">
-						<h3>Chào Bạn</h3>
-						<ul style="padding:0;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;">
-							<? if ($_SESSION['idfb']) { ?>
-							<li class="list-group-item">
-								<span class="badge bg-maroon"><? echo isset($_SESSION['ten']) ? $_SESSION['ten'] : "Chưa Thiết Lập"; ?></span> Tên
-							</li> 
-							<li class="list-group-item ">
-								<span class="badge bg-navy"><? echo number_format($vnds['vnd'])."  <i class='fa fa-money'> </i>"; ?></span> VNĐ
-							</li>
-							<li class="list-group-item">
-								<span class="badge bg-yellow"><?php if(isset($_SESSION['idfb'])) echo $_SESSION['idfb']; ?></span> ID
-							</li>
-							<li class="list-group-item ">
-								<span class="badge bg-green"><? echo isset($_SESSION['username']) ? $_SESSION['username'] : "Chưa Thiết Lập"; ?></span> User
-							</li>
-							<li class="list-group-item">
-								<span class="badge bg-lime"><?php if(isset($_SESSION['gioitinh'])) echo $_SESSION['gioitinh']; ?></span> Giới Tính
-							</li>
-							<li class="list-group-item">
-								<span class="badge bg-olive"><?php if(isset($_SESSION['ngaysinh'])) echo $_SESSION['ngaysinh']; ?></span> Ngày Sinh
-							</li>
-							<li class="list-group-item">
-								<span class="badge bg-red"><? echo isset($_SESSION['email']) ? $_SESSION['email'] : "Chưa Thiết Lập"; ?></span> Mail
-							</li>
-							<li class="list-group-item">
-								<span class="badge bg-blue"><? echo isset($_SESSION['sdt']) ? $_SESSION['sdt'] : "Chưa Thiết Lập"; ?></span> SĐT
-							</li><br>
-							<li class="list-group-item">
-								<a style="blue">Ấn Vào</a> <i class="fa fa-bell-o" style="color:green;"></i> <a style="blue">Để Xem Những Cập Nhật Mới Nhé. Chúc Các Bạn Online Vui Vẻ.</a>
-							</li>
-							<? } else echo '<li class="list-group-item" style="color:red;"><i class="fa fa-hand-peace-o"></i>  Chào Bạn, Hiện Tại Bạn Chưa Đăng Nhập. <i class="fa fa-heart-o"></i></li><li class="list-group-item"><a style="blue">Ấn Vào</a> <i class="fa fa-bell-o" style="color:green;"></i> <a style="blue">Để Xem Những Cập Nhật Mới Nhé. Chúc Các Bạn Online Vui Vẻ.</a></li>'; ?>
-						</ul>
-					</div>
-					<div id="tablanguage" class="tab-pane">
-						<h3>Chọn Ngôn Ngữ</h3>
-						<ul style="padding:0;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;">
-							<li class="list-group-item">
-								<span style="color:red;"><i class="fa fa-language"></i> <h4>Translate</h4></span>
-								<p><div id="google_translate_element"></div></p>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</aside>
-		</div>
-		<div class="modal inmodal" id="huongdan" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content animated bounceIn">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-						<h4 class="modal-title">Làm Thế Nào Để Sử Dụng?</h4>
-					</div>
-					<div class="modal-body">
-						<div class="box-body well well-sm no-shadow" style="font-size:13px;">
-							<font color="blue">Điều Kiện 1:</font> Thiết Lập Năm Sinh Đủ 18 Tuổi. 
-							<hr>
-							<font color="blue">Điều Kiện 2:</font> Ai Có Thể Theo Dõi Bạn? Hãy Chọn <kbd><i class="fa fa-globe"></i> Mọi Người <i class="fa fa-caret-down"></i></kbd> Hoặc <kbd><i class="fa fa-globe"></i> EveryOne <i class="fa fa-caret-down"></i></kbd>. <a href="https://www.facebook.com/settings?tab=followers" target="_blank" rel="nofollow"><font color="red">Thiết Lập</font></a>
-							<hr>
-							<font color="blue">Điều Kiện 3:</font> Các Bài Viết Phải Được Đặt Ở Chế Độ <kbd><i class="fa fa-globe"></i> Mọi Người</kbd>. <a href="https://www.facebook.com/settings?tab=privacy&section=composer&view" target="_blank" rel="nofollow"><font color="red">Thiết Lập</font></a><br>
-							(Thiết Lập Này Chỉ Áp Dụng Cho Các Bài Đăng Sau Khi Bạn Thiết Lập. Các Bài Đăng Trước Đó, Bạn Phải Chỉnh Sửa Ngày Trên Bài Đăng.)
-							<hr>
-							<font color="blue">Điều Kiện 4:</font> Riêng Auto Bình Luận Phải Bật Cho Phép <kbd><i class="fa fa-globe"></i> Mọi Người <i class="fa fa-caret-down"></i></kbd> Hoặc <kbd><i class="fa fa-globe"></i> EveryOne <i class="fa fa-caret-down"></i></kbd> Có Thể Bình Luận Bài Viết Của Bạn. <a href="http://fb.com/settings?tab=followers&amp;section=comment&amp;view" target="_blank" rel="nofollow"><font color="red">Thiết lập</font></a><br><br>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-outline btn-danger" data-dismiss="modal">Đóng</button>
-					</div>
-				</div>
-			</div>
-		</div>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script type="text/javascript">
+                <div class="page-footer">
+                    <p class="no-s">2017 &copy; Bản Quyền BMN2312.</p>
+                </div>
+            </div><!-- Page Inner -->
+        </main><!-- Page Content -->
+        <div class="cd-overlay"></div>
+
+        <!-- Javascripts -->
+        <script src="../assets/plugins/jquery/jquery-2.1.3.min.js"></script>
+        <script src="../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script src="../assets/plugins/pace-master/pace.min.js"></script>
+        <script src="../assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+        <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="../assets/plugins/switchery/switchery.min.js"></script>
+        <script src="../assets/plugins/uniform/jquery.uniform.min.js"></script>
+        <script src="../assets/plugins/offcanvasmenueffects/js/classie.js"></script>
+        <script src="../assets/plugins/offcanvasmenueffects/js/main.js"></script>
+        <script src="../assets/plugins/waves/waves.min.js"></script>
+        <script src="../assets/plugins/3d-bold-navigation/js/main.js"></script>
+        <script src="../assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+        <script src="../assets/plugins/jquery-counterup/jquery.counterup.min.js"></script>
+        <script src="../assets/plugins/toastr/toastr.min.js"></script>
+        <script src="../assets/plugins/flot/jquery.flot.min.js"></script>
+        <script src="../assets/plugins/flot/jquery.flot.time.min.js"></script>
+        <script src="../assets/plugins/flot/jquery.flot.symbol.min.js"></script>
+        <script src="../assets/plugins/flot/jquery.flot.resize.min.js"></script>
+        <script src="../assets/plugins/flot/jquery.flot.tooltip.min.js"></script>
+        <script src="../assets/plugins/curvedlines/curvedLines.js"></script>
+        <script src="../assets/plugins/metrojs/MetroJs.min.js"></script>
+        <script src="../assets/js/modern.js"></script>
+        <script src="../assets/js/pages/dashboard.js"></script>
+		<script type="text/javascript">
 !function(e){function t(t,n){return parseInt(e.css(t[0],n))||0}function n(e){return e[0].offsetWidth+t(e,"marginLeft")+t(e,"marginRight")}function i(e){return e[0].offsetHeight+t(e,"marginTop")+t(e,"marginBottom")}e.fn.jCarouselLite=function(t){return t=e.extend({btnPrev:null,btnNext:null,btnGo:null,mouseWheel:!1,auto:null,hoverPause:!1,speed:200,easing:null,vertical:!1,circular:!0,visible:3,start:0,scroll:1,beforeStart:null,afterEnd:null},t||{}),this.each(function(){function r(){l(),N=setInterval(function(){c(g+t.scroll)},t.auto+t.speed)}function l(){clearInterval(N)}function s(){return p.slice(g).slice(0,b)}function c(n){if(!o){if(t.beforeStart&&t.beforeStart.call(this,s()),t.circular)0>n?(v.css(u,-((g+d)*m)+"px"),g=n+d):n>x-b?(v.css(u,-((g-d)*m)+"px"),g=n-d):g=n;else{if(0>n||n>x-b)return;g=n}o=!0,v.animate("left"==u?{left:-(g*m)}:{top:-(g*m)},t.speed,t.easing,function(){t.afterEnd&&t.afterEnd.call(this,s()),o=!1}),t.circular||(e(t.btnPrev+","+t.btnNext).removeClass("disabled"),e(g-t.scroll<0&&t.btnPrev||g+t.scroll>x-b&&t.btnNext||[]).addClass("disabled"))}return!1}var o=!1,u=t.vertical?"top":"left",a=t.vertical?"height":"width",f=e(this),v=e("ul",f),h=e("li",v),d=h.size(),b=t.visible;t.circular&&(v.prepend(h.slice(d-b+1).clone()).append(h.slice(0,t.scroll).clone()),t.start+=b-1);var p=e("li",v),x=p.size(),g=t.start;f.css("visibility","visible"),p.css({overflow:"hidden","float":t.vertical?"none":"left"}),v.css({margin:"0",padding:"0",position:"relative","list-style-type":"none","z-index":"1"}),f.css({overflow:"hidden",position:"relative","z-index":"2",left:"0px"});var m=t.vertical?i(p):n(p),P=m*x,w=m*b;p.css({width:p.width(),height:p.height()}),v.css(a,P+"px").css(u,-(g*m)),f.css(a,w+"px"),t.btnPrev&&(e(t.btnPrev).click(function(){return c(g-t.scroll)}),t.hoverPause&&e(t.btnPrev).hover(function(){l()},function(){r()})),t.btnNext&&(e(t.btnNext).click(function(){return c(g+t.scroll)}),t.hoverPause&&e(t.btnNext).hover(function(){l()},function(){r()})),t.btnGo&&e.each(t.btnGo,function(n,i){e(i).click(function(){return c(t.circular?t.visible+n:n)})}),t.mouseWheel&&f.mousewheel&&f.mousewheel(function(e,n){return c(n>0?g-t.scroll:g+t.scroll)});var N;t.auto&&(t.hoverPause&&f.hover(function(){l()},function(){r()}),r())})}}(jQuery);
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'vi'}, 'google_translate_element');
