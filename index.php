@@ -183,17 +183,14 @@ if($_GET['ref']){
                         </div>					
 					
 
-						<div class="col-md-6">
-							<div class="box box-primary">
-								<div class="box-title box-header with-border">
-									<h4><i class="fa fa-star"></i> Người Dùng Vip</h4>
-									<div class="box-tools pull-right">
-										<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-										<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-									</div>
-								</div>
-								<div class="box-body" style="overflow: auto;height: 200px;">
-								<?php
+<div class="col-lg-6 col-md-6">
+                            <div class="panel panel-white">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Người Dùng Vip</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive project-stats">  
+                                       <?php
 								echo'
 									<table class=table>
 									<thead><tr>
@@ -230,8 +227,11 @@ if($_GET['ref']){
 								<div class="box-footer">
 									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Người Dùng VIP Trên Hệ Thống.</center>
 								</div>
-							</div>				
-						</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- Main Wrapper -->
 						<div class="col-md-6">
 							<div class="box box-info">
 								<div class="box-title box-header with-border">
