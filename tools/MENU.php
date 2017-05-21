@@ -34,16 +34,15 @@
                                 </div>    
                             </div>
 
-<div class="col-lg-12">
-     <div class="box box-info">
-	  <div class="box-title box-header with-border">
-	       <h4> <i class="fa fa-life-bouy"></i> Chat Box</h4>
-               <div class="box-tools pull-right">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-               </div>
-	   </div>
-	   <div class="box-body">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="panel panel-white">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Chat Box</h4>
+                                    <div class="panel-control">
+                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Reload" class="panel-reload"><i class="icon-reload"></i></a>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
 			<div class="input-group">
                 <input id="mess" type="text" placeholder="Nhập Nội Dung..." class="form-control">
 				<span class="input-group-btn">
@@ -54,9 +53,10 @@
 		     <div id="message"><div id="lol">Đang Tải...</div> 
                      </div>
                 </div>
-	   </div>
-     </div>
-</div>
+                                </div>
+                            </div>
+                        </div>
+						
 
                             <div class="col-lg-6 col-md-6">
                             <div class="panel panel-white">
