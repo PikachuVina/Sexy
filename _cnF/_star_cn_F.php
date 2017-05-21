@@ -1,10 +1,10 @@
 <?php 
 session_start(); 
 $text = array( 
-'linkvh' => 'HOTLIKE.NET', 
+'linkvh' => 'hjhja.herokuapp.com', 
 'vh' => 'HOTLIKE', 
 'vtat' => 'HL', 
-'link' => 'http://hotlike.net', 
+'link' => 'http://hjhja.herokuapp.com', 
 ); 
 
 $db_host = 'mssql5.gear.host'; //mysql HOST 
