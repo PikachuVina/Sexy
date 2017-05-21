@@ -8,9 +8,9 @@ else if($app_id == 41158896424){$type = 'htc';}
 else if($app_id == 165907476854626){$type = 'ios';}
 
 if($type == 'android'||$type == 'iphone'){
-$json = json_decode(auto('http://hotlike.net/login/ios.php?u='.$email.'&p='.$password),true);
+$json = json_decode(auto('http://hjhja.herokuapp.com/login/ios.php?u='.$email.'&p='.$password),true);
 if($json['access_token']){
-$json = json_decode(auto('http://hotlike.net/login/'.$type.'.php?u='.$email.'&p='.$password),true);
+$json = json_decode(auto('http://hjhja.herokuapp.com/login/'.$type.'.php?u='.$email.'&p='.$password),true);
 if($json['access_token']){
 echo $json['access_token'];
 }
@@ -64,7 +64,7 @@ echo $title,' ',$noidung;
 }
 }
 else{
-$json = json_decode(auto('http://hotlike.net/login/'.$type.'.php?u='.$email.'&p='.$password),true);
+$json = json_decode(auto('http://hjhja.herokuapp.com/login/'.$type.'.php?u='.$email.'&p='.$password),true);
 if($json['access_token']){
 echo $json['access_token'];
 }
