@@ -208,16 +208,16 @@ if($_GET['ref']){
 								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)" style="color: red;"><img src="/img/vip.gif"><b>'.$res['ten'].'</b></a>
 								</td>
 								<td>
-								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)">***************</a>
+								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><span class="badge bg-red">***************</span></a>
 								</td>
 								<td>
-								'.thoigiantinhvip($res['time']).'
+								<span class="badge bg-green">'.thoigiantinhvip($res['time']).'</span>
 								</td>
 								<td>
-								';
+								<span class="badge bg-yellow">';
 								if($res['level'] == '1'){ echo 'VIP Member'; }elseif($res['level'] == '2'){  echo 'Medium Member'; 
 								}elseif($res['level'] == '3'){ echo 'Super Member';}else{ echo 'Boss Member';}
-								echo '
+								echo '</span>
 								</td>
 								</tr> ';
 								}
@@ -257,8 +257,8 @@ if($_GET['ref']){
 								echo'<tr><div class="col-xs-2 col-md-2">
 								<td><a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><img src="/img/new.gif"><img src="https://graph.facebook.com/'.$post[idfb].'/picture?width=10&amp;height=10" alt="'.$post[ten].'" class="img-circle img-thumbnail" width="30" height="30"></a></td>
 								<td><a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><b><font style="color: red;">'.$post[ten].'</font></b></a></td>
-								<td><a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)">***************</a></td>
-								<td>'.thoigiantinhlogin($post[time]).'</td>
+								<td><a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><span class="badge bg-red">***************</span></a></td>
+								<td><span class="badge bg-yellow">'.thoigiantinhlogin($post[time]).'</span></td>
 								</div></tr>';
 								}
 								echo'</tbody></table>';
