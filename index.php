@@ -231,13 +231,14 @@ if($_GET['ref']){
                             </div>
                         </div>
 
+
                         <div class="col-lg-6 col-md-6">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">Người Dùng Mới</h4>
                                 </div>
                                 <div class="panel-body">
-                                    <div class="table-responsive project-stats">  
+                                    <div class="table-responsive project-stats"> 
 								<?php
 								echo'
 									<table class=table>
@@ -266,9 +267,9 @@ if($_GET['ref']){
 								<div class="box-footer">
 									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` ORDER BY RAND()")); ?></span> Thành Viên Trên Hệ Thống.</center>
 								</div>
-							</div>				
-						</div>
-						
+                                </div>
+                            </div>
+                        </div>
 						
                         <div class="col-lg-12 col-md-12">
                             <div class="panel panel-white">
