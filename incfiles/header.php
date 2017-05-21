@@ -92,7 +92,7 @@
 								</a>
 							</li>
 							<li>
-								<a onclick="toarst(&quot;success&quot;,&quot;Hiện Tại Có <?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM shoutbox")); ?> Tin Nhắn Trong Chatbox.&quot;,&quot;Số Tin Nhắn&quot;)">
+								<a onclick="toarst(&quot;success&quot;,&quot;Hiện Tại Có <?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM shoutbox ODER BY RAND()")); ?> Tin Nhắn Trong Chatbox.&quot;,&quot;Số Tin Nhắn&quot;)">
 									<i class="fa fa-envelope-o" style="color:blue;"></i><sup class="label label-info" style="border-radius: 15px;">New <?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM shoutbox"), 0); ?></sup>
 								</a>
 							</li>
