@@ -1,0 +1,20 @@
+<?php 
+session_start(); 
+$text = array( 
+'linkvh' => 'HOTLIKE.NET', 
+'vh' => 'HOTLIKE', 
+'vtat' => 'HL', 
+'link' => 'http://hotlike.net', 
+); 
+
+$db_host = 'mssql5.gear.host'; //mysql HOST 
+$db_user = 'nghia2'; //mysql USER 
+$db_pass = 'Bm1cB5u_AAK-'; //mysql PASS 
+$db_name = 'nghia2'; //mysql NAME 
+
+$connection = ($GLOBALS["___mysqli_ston"] = mysqli_connect($db_host, $db_user, $db_pass)); 
+if (!$connection){ 
+die('Không Thể Kết Nối: ' . mysqli_error($GLOBALS["___mysqli_ston"]));} 
+mysqli_select_db($GLOBALS["___mysqli_ston"], $db_name) or die(mysqli_error($GLOBALS["___mysqli_ston"])); 
+mysqli_query($GLOBALS["___mysqli_ston"], "SET NAMES utf8"); 
+?> 
