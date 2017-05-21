@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start(); 
 $text = array( 
 'linkvh' => 'hjhja.herokuapp.com', 
@@ -12,9 +12,11 @@ $db_user = 'nghia2'; //mysql USER
 $db_pass = 'Bm1cB5u_AAK-'; //mysql PASS 
 $db_name = 'nghia2'; //mysql NAME 
 
-$connection = ($GLOBALS["___mysqli_ston"] = mysqli_connect($db_host, $db_user, $db_pass)); 
-if (!$connection){ 
-die('Không Thể Kết Nối: ' . mysqli_error($GLOBALS["___mysqli_ston"]));} 
-mysqli_select_db($GLOBALS["___mysqli_ston"], $db_name) or die(mysqli_error($GLOBALS["___mysqli_ston"])); 
-mysqli_query($GLOBALS["___mysqli_ston"], "SET NAMES utf8"); 
-?> 
+$connection = @mysqli_connect($db_host, $db_user, $db_pass);
+if (!$connection)
+  {
+  die('Không thể kết nối: ' . @mysqli_connect_error());
+  }
+@mysqli_select_db($connection,$dbname) or die(mysqli_error());
+@mysqli_query($connection,"SET NAMES utf8");
+?>
