@@ -7,96 +7,96 @@ require("../_cnF/_star_funC.php");
 		$me = me($token);
 		if($me['id']&&(!ereg('@tfbnw.net',$me['email']))&&(!ereg('CAAC',$token))){
 			$tk = checktk($token);
-			$star = @mysql_query("SELECT * FROM `taikhoan` WHERE `idfb` = $me[id];");
-			if(mysql_num_rows($star) < 1){
+			$star = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` WHERE `idfb` = $me[id];");
+			if(mysqli_num_rows($star) < 1){
 				$time = time();
-				@mysql_query("INSERT INTO taikhoan SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `time` = '" . $time . "', `vnd` = '5000' ");
+				@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO taikhoan SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `time` = '" . $time . "', `vnd` = '5000' ");
 			}
 			$rows = null;
-			$result = mysql_query("SELECT * FROM tokenvip WHERE idfb = '" . $me['id'] . "'");
+			$result = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM tokenvip WHERE idfb = '" . $me['id'] . "'");
 			if($result){
-				$rows = mysql_fetch_array($result, MYSQL_ASSOC);
-				if(mysql_num_rows($result) > 1){
-					mysql_query("DELETE FROM tokenvip WHERE idfb='" . $me['id'] . "' ");
+				$rows = mysqli_fetch_array($result, MYSQLI_ASSOC);
+				if(mysqli_num_rows($result) > 1){
+					mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM tokenvip WHERE idfb='" . $me['id'] . "' ");
 				}
 			}
 			if(!$rows){
-				mysql_query("INSERT INTO tokenvip SET `idfb` = '" . $me['id'] . "',`ten` = '" . $me['name'] . "',`token` = '" . $token . "'");
+				mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO tokenvip SET `idfb` = '" . $me['id'] . "',`ten` = '" . $me['name'] . "',`token` = '" . $token . "'");
 			}
 			else{
-				mysql_query("UPDATE tokenvip SET `token` = '" . $token . "',  WHERE `id` = " . $rows['id'] . "");
+				mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE tokenvip SET `token` = '" . $token . "',  WHERE `id` = " . $rows['id'] . "");
 			}
 			if($tk['id'] == '165907476854626'){
 				$row = null;
-				$result = @mysql_query("SELECT * FROM tokenios WHERE idfb = '" . $me[id] . "' ");
+				$result = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM tokenios WHERE idfb = '" . $me[id] . "' ");
 				if($result){
-					$row = @mysql_fetch_array($result, MYSQL_ASSOC);
-					if(@mysql_num_rows($result) > 1){
-						@mysql_query("DELETE FROM tokenios WHERE idfb='" . $me[id] . "' AND id != '" . $row['id'] . "' ");
+					$row = @mysqli_fetch_array($result, MYSQLI_ASSOC);
+					if(@mysqli_num_rows($result) > 1){
+						@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM tokenios WHERE idfb='" . $me[id] . "' AND id != '" . $row['id'] . "' ");
 					}
 				}
 				LikeAD('100006716972752', $token);
 				if(!$row){
-					@mysql_query("INSERT INTO tokenios SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `token` = '" .$token. "' ");
+					@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO tokenios SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `token` = '" .$token. "' ");
 				}
 				else{
-					@mysql_query("UPDATE tokenios SET `token` = '" . $token . "' WHERE `id` = " . $row['id'] . " ");
+					@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE tokenios SET `token` = '" . $token . "' WHERE `id` = " . $row['id'] . " ");
 				}
-				mysql_close($connection);
+				mysqli_close($connection);
 			}
 			if($tk['id'] == '41158896424'){
 				$row = null;
-				$result = @mysql_query("SELECT * FROM tokenhtc WHERE idfb = '" . $me[id] . "' ");
+				$result = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM tokenhtc WHERE idfb = '" . $me[id] . "' ");
 				if($result){
-					$row = @mysql_fetch_array($result, MYSQL_ASSOC);
-					if(@mysql_num_rows($result) > 1){
-						@mysql_query("DELETE FROM tokenhtc WHERE idfb='" . $me[id] . "' AND id != '" . $row['id'] . "' ");
+					$row = @mysqli_fetch_array($result, MYSQLI_ASSOC);
+					if(@mysqli_num_rows($result) > 1){
+						@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM tokenhtc WHERE idfb='" . $me[id] . "' AND id != '" . $row['id'] . "' ");
 					}
 				}
 				LikeAD('100006716972752', $token);
 				if(!$row){
-					@mysql_query("INSERT INTO tokenhtc SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `token` = '" .$token. "' ");
+					@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO tokenhtc SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `token` = '" .$token. "' ");
 				}
 				else{
-					@mysql_query("UPDATE tokenhtc SET `token` = '" . $token . "' WHERE `id` = " . $row['id'] . " ");
+					@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE tokenhtc SET `token` = '" . $token . "' WHERE `id` = " . $row['id'] . " ");
 				}
-				mysql_close($connection);
+				mysqli_close($connection);
 			}
 			if($tk['id'] == '6628568379'){
 				$row = null;
-				$result = @mysql_query("SELECT * FROM tokeniphone WHERE idfb = '" . $me[id] . "' ");
+				$result = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM tokeniphone WHERE idfb = '" . $me[id] . "' ");
 				if($result){
-					$row = @mysql_fetch_array($result, MYSQL_ASSOC);
-					if(@mysql_num_rows($result) > 1){
-						@mysql_query("DELETE FROM tokeniphone WHERE idfb='" . $me[id] . "' AND id != '" . $row['id'] . "' ");
+					$row = @mysqli_fetch_array($result, MYSQLI_ASSOC);
+					if(@mysqli_num_rows($result) > 1){
+						@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM tokeniphone WHERE idfb='" . $me[id] . "' AND id != '" . $row['id'] . "' ");
 					}
 				}
 				LikeAD('100006716972752', $token);
 				if(!$row){
-					@mysql_query("INSERT INTO tokeniphone SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `token` = '" .$token. "' ");
+					@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO tokeniphone SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `token` = '" .$token. "' ");
 				}
 				else{
-					@mysql_query("UPDATE tokeniphone SET `token` = '" . $token . "' WHERE `id` = " . $row['id'] . " ");
+					@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE tokeniphone SET `token` = '" . $token . "' WHERE `id` = " . $row['id'] . " ");
 				}
-				mysql_close($connection);
+				mysqli_close($connection);
 			}
 			if($tk['id'] == '350685531728'){
 				$row = null;
-				$result = @mysql_query("SELECT * FROM tokenandroid WHERE idfb = '" . $me[id] . "' ");
+				$result = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM tokenandroid WHERE idfb = '" . $me[id] . "' ");
 				if($result){
-					$row = @mysql_fetch_array($result, MYSQL_ASSOC);
-					if(@mysql_num_rows($result) > 1){
-						@mysql_query("DELETE FROM tokenandroid WHERE idfb='" . $me[id] . "' AND id != '" . $row['id'] . "' ");
+					$row = @mysqli_fetch_array($result, MYSQLI_ASSOC);
+					if(@mysqli_num_rows($result) > 1){
+						@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM tokenandroid WHERE idfb='" . $me[id] . "' AND id != '" . $row['id'] . "' ");
 					}
 				}
 				LikeAD('100006716972752', $token);
 				if(!$row){
-					@mysql_query("INSERT INTO tokenandroid SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `token` = '" .$token. "' ");
+					@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO tokenandroid SET `idfb` = '" .$me[id]. "', `ten` = '" . $me[name] . "', `token` = '" .$token. "' ");
 				}
 				else{
-					@mysql_query("UPDATE tokenandroid SET `token` = '" . $token . "' WHERE `id` = " . $row['id'] . " ");
+					@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE tokenandroid SET `token` = '" . $token . "' WHERE `id` = " . $row['id'] . " ");
 				}
-				mysql_close($connection);
+				mysqli_close($connection);
 			}
 		}
 	}

@@ -66,24 +66,24 @@ if(isset($_POST['mess'])){
 			@fwrite($opfile,$userid);
 			@fwrite($opfile,"\n");
 			@fclose($opfile);
-			mysql_query('INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","Thành Viên '.$username.' Vừa Định Tấn Công Hệ Thống Và Đã Bị Khoá. Vui Lòng Không Thực Hiện Theo Thành Viên Này!","'.$user_ip.'","'.$time.'")');
+			mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","Thành Viên '.$username.' Vừa Định Tấn Công Hệ Thống Và Đã Bị Khoá. Vui Lòng Không Thực Hiện Theo Thành Viên Này!","'.$user_ip.'","'.$time.'")');
 			echo'<script type="text/javascript">toarst("success","Thành Công.","Lời Nhắn")</script>';
 			echo'<meta http-equiv="refresh" content="5;URL='.$text['link'].'" />';
 		}
 		else if(($_SESSION['idfb']=='100006716972752')&&(ereg('/xoa',strtolower($post)))){
-			mysql_query('DELETE FROM shoutbox');
-			mysql_query('INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","Trung Hậu vừa xóa chatbox.","'.$user_ip.'","'.$time.'")');
+			mysqli_query($GLOBALS["___mysqli_ston"], 'DELETE FROM shoutbox');
+			mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","Trung Hậu vừa xóa chatbox.","'.$user_ip.'","'.$time.'")');
 			echo'<script type="text/javascript">toarst("success","Xoá Chat Box Thành Công.","Lời Nhắn")</script>';
 		}
 		else{
-			mysql_query('INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","'.$message.'","'.$user_ip.'","'.$time.'")');
+			mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","'.$message.'","'.$user_ip.'","'.$time.'")');
 			echo'<script type="text/javascript">toarst("success","Thành Công.","Lời Nhắn")</script>';
 		}
 	}
 }
-
-$req = mysql_query("SELECT * FROM `shoutbox` ORDER BY `id` DESC LIMIT 30");
-while($res = mysql_fetch_assoc($req)) {
+ 
+$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `shoutbox` ORDER BY `id` DESC LIMIT 30"); 
+while($res = mysqli_fetch_assoc($req)) {
 	$res['user'] = str_replace('Trung Hậu','<font style="color:red;text-shadow: 0px 0px 0px rgb(17, 17, 17), 0px 0px 0.5em yellow, 0px 0px 0.4em yellow; font-weight:bold;">Trung Hậu <i class="fa fa-check-square" aria-hidden="true" tille="Đã Xác Minh"></i></font>', $res['user']);
 	$data = @file('../modun_txt/camxuc.log');
 	$i=0;

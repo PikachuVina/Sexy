@@ -25,11 +25,11 @@ if ($_POST && $_SESSION[idfb])
 	        $camxuc =  isset($_POST['camxuc']) ? baove($_POST['camxuc']) : FALSE;
 	 	$likecmt =  isset($_POST['likecmt']) ? baove($_POST['likecmt']) : FALSE;
 		if($yeucau == "OK"){
-			$res = @mysql_query("SELECT * FROM botcamxuc WHERE idfb = $idfb");
-			if (mysql_num_rows($res) > 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botcamxuc WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) > 0) {
 				die('ERROR: Bạn Đang Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi.<script type="text/javascript">toarst("error","Bạn Đang Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Chỉ Có Thể Cập Nhật Hoặc Xóa BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("INSERT INTO botcamxuc SET 
+			@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO botcamxuc SET 
 				`idfb` = '".$idfb."', 
 				`token` = '".$token."', 
 				`camxuc` = '".$camxuc."', 
@@ -38,11 +38,11 @@ if ($_POST && $_SESSION[idfb])
 				");
 			die('SUCCESS: Cài Đặt BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Lưu Ý: Khi Token Ko Còn Sử Dụng Được Chúng Tôi Sẽ Tự Động Xóa Token Của Bạn Tại Hệ Thống Lúc Đó Bạn Phải Cài Đặt Lại. ^_^ <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cài Đặt BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "UP") {
-			$res = @mysql_query("SELECT * FROM botcamxuc WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botcamxuc WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("UPDATE botcamxuc
+			@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE botcamxuc
 				         SET
 				            `token` = '".$token."',
 				            `camxuc` = '".$camxuc."',
@@ -53,11 +53,11 @@ if ($_POST && $_SESSION[idfb])
 			die('SUCCESS: Cập Nhật BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cập Nhật BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "HUY") 
 		{
-			$res = @mysql_query("SELECT * FROM botcamxuc WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botcamxuc WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("DELETE FROM botcamxuc
+			@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM botcamxuc
 			            WHERE
 			               idfb = '".$idfb."'
 			         ");
@@ -70,11 +70,11 @@ if ($_POST && $_SESSION[idfb])
 	}elseif ($loai == "botlike") 
 	{	$likecmt =  isset($_POST['likecmt']) ? baove($_POST['likecmt']) : FALSE;
 		if($yeucau == "OK"){
-			$res = @mysql_query("SELECT * FROM botlike WHERE idfb = $idfb");
-			if (mysql_num_rows($res) > 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botlike WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) > 0) {
 				die('ERROR: Bạn Đang Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi.<script type="text/javascript">toarst("error","Bạn Đang Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Chỉ Có Thể Cập Nhật Hoặc Xóa BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("INSERT INTO botlike SET 
+			@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO botlike SET 
 				`idfb` = '".$idfb."', 
 				`token` = '".$token."', 
 				`likecmt` = '".$likecmt."', 
@@ -82,11 +82,11 @@ if ($_POST && $_SESSION[idfb])
 				");
 			die('SUCCESS: Cài Đặt BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Lưu Ý: Khi Token Ko Còn Sử Dụng Được Chúng Tôi Sẽ Tự Động Xóa Token Của Bạn Tại Hệ Thống Lúc Đó Bạn Phải Cài Đặt Lại. ^_^ <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cài Đặt BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "UP") {
-			$res = @mysql_query("SELECT * FROM botlike WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botlike WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("UPDATE botlike
+			@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE botlike
 				         SET
 				            `token` = '".$token."',
 				            `likecmt` = '".$likecmt."'
@@ -96,11 +96,11 @@ if ($_POST && $_SESSION[idfb])
 			die('SUCCESS: Cập Nhật BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cập Nhật BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "HUY") 
 		{
-			$res = @mysql_query("SELECT * FROM botlike WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botlike WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("DELETE FROM botlike
+			@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM botlike
 			            WHERE
 			               idfb = '".$idfb."'
 			         ");
@@ -113,11 +113,11 @@ if ($_POST && $_SESSION[idfb])
 	}elseif ($loai == "botexlike") 
 	{	$likecmt =  isset($_POST['likecmt']) ? baove($_POST['likecmt']) : FALSE;
 		if($yeucau == "OK"){
-			$res = @mysql_query("SELECT * FROM botex WHERE idfb = $idfb");
-			if (mysql_num_rows($res) > 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botex WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) > 0) {
 				die('ERROR: Bạn Đang Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi.<script type="text/javascript">toarst("error","Bạn Đang Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Chỉ Có Thể Cập Nhật Hoặc Xóa BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("INSERT INTO botex SET 
+			@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO botex SET 
 				`idfb` = '".$idfb."', 
 				`token` = '".$token."', 
 				`likecmt` = '".$likecmt."', 
@@ -125,11 +125,11 @@ if ($_POST && $_SESSION[idfb])
 				");
 			die('SUCCESS: Cài Đặt BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Lưu Ý: Khi Token Ko Còn Sử Dụng Được Chúng Tôi Sẽ Tự Động Xóa Token Của Bạn Tại Hệ Thống Lúc Đó Bạn Phải Cài Đặt Lại. ^_^ <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cài Đặt BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "UP") {
-			$res = @mysql_query("SELECT * FROM botex WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botex WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script><meta http-equiv="refresh" content="3">');
 			}
-			@mysql_query("UPDATE botex
+			@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE botex
 				         SET
 				            `token` = '".$token."',
 				            `likecmt` = '".$likecmt."'
@@ -139,11 +139,11 @@ if ($_POST && $_SESSION[idfb])
 			die('SUCCESS: Cập Nhật BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cập Nhật BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "HUY") 
 		{
-			$res = @mysql_query("SELECT * FROM botex WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botex WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("DELETE FROM botex WHERE idfb = '".$idfb."'");
+			@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM botex WHERE idfb = '".$idfb."'");
 			die('SUCCESS: Xóa BOT Thành Công.<script type="text/javascript">toarst("success","Tài Khoản Của Bạn Đã Được Xóa Khỏi Hệ Thống.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}else{
 			die('ERROR: Sai Cú Pháp. Chọn ON Để Bật Bot, UP Để Cập Nhật Bot, OFF Để Xoá Bot.<script type="text/javascript">toarst("error","Chọn ON Để Bật Bot, UP Để Cập Nhật Bot, OFF Để Xoá Bot.","Thông Báo Lỗi")</script>');
@@ -156,11 +156,11 @@ if ($_POST && $_SESSION[idfb])
                 }
              $likecmt =  isset($_POST['likecmt']) ? baove($_POST['likecmt']) : FALSE;
 		if($yeucau == "OK"){
-			$res = @mysql_query("SELECT * FROM botexlove WHERE idfb = $idfb");
-			if (mysql_num_rows($res) > 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botexlove WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) > 0) {
 				die('ERROR: Bạn Đang Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi.<script type="text/javascript">toarst("error","Bạn Đang Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Chỉ Có Thể Cập Nhật Hoặc Xóa BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("INSERT INTO botexlove SET 
+			@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO botexlove SET 
 				`idfb` = '".$idfb."', 
 				`token` = '".$token."', 
 				`likecmt` = '".$likecmt."', 
@@ -168,11 +168,11 @@ if ($_POST && $_SESSION[idfb])
 				");
 			die('SUCCESS: Cài Đặt BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Lưu Ý: Khi Token Ko Còn Sử Dụng Được Chúng Tôi Sẽ Tự Động Xóa Token Của Bạn Tại Hệ Thống Lúc Đó Bạn Phải Cài Đặt Lại. ^_^ <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cài Đặt BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "UP") {
-			$res = @mysql_query("SELECT * FROM botexlove WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botexlove WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("UPDATE botexlove
+			@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE botexlove
 				         SET
 				            `token` = '".$token."',
 				            `likecmt` = '".$likecmt."'
@@ -182,11 +182,11 @@ if ($_POST && $_SESSION[idfb])
 			die('SUCCESS: Cập Nhật BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cập Nhật BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "HUY") 
 		{
-			$res = @mysql_query("SELECT * FROM botexlove WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botexlove WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("DELETE FROM botexlove
+			@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM botexlove
 			            WHERE
 			               idfb = '".$idfb."'
 			         ");
@@ -199,11 +199,11 @@ if ($_POST && $_SESSION[idfb])
 		$quangcao =  isset($_POST['quangcao']) ? baove($_POST['quangcao']) : FALSE;
 		if($yeucau == "OK")
 		{
-			$res = @mysql_query("SELECT * FROM botcmt WHERE idfb = $idfb");
-			if (mysql_num_rows($res) > 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botcmt WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) > 0) {
 				die('ERROR: Bạn Đang Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi.<script type="text/javascript">toarst("error","Bạn Đang Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Chỉ Có Thể Cập Nhật Hoặc Xóa BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("INSERT INTO botcmt SET 
+			@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO botcmt SET 
 				`idfb` = '".$idfb."', 
 				`token` = '".$token."', 
 				`bieutuong` = '".$bieutuong."',
@@ -214,20 +214,20 @@ if ($_POST && $_SESSION[idfb])
 		}
 		elseif ($yeucau == "UP") 
 		{
-			$res = @mysql_query("SELECT * FROM botcmt WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botcmt WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("UPDATE botcmt SET `token` = '".$token."', `quangcao` = '".$quangcao."', `bieutuong` = '".$bieutuong."' WHERE `idfb` = ".$idfb."");
+			@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE botcmt SET `token` = '".$token."', `quangcao` = '".$quangcao."', `bieutuong` = '".$bieutuong."' WHERE `idfb` = ".$idfb."");
 			die('SUCCESS: Cập Nhật BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cập Nhật BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}
 		elseif ($yeucau == "HUY") 
 		{
-			$res = @mysql_query("SELECT * FROM botcmt WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM botcmt WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("DELETE FROM botcmt
+			@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM botcmt
 			            WHERE
 			               idfb = '".$idfb."'
 			         ");
@@ -240,11 +240,11 @@ if ($_POST && $_SESSION[idfb])
 	}elseif ($loai == "bottuongtac"){	
 		if($yeucau == "OK")
 		{
-			$res = @mysql_query("SELECT * FROM bottuongtac WHERE idfb = $idfb");
-			if (mysql_num_rows($res) > 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM bottuongtac WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) > 0) {
 				die('ERROR: Bạn Đang Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi.<script type="text/javascript">toarst("error","Bạn Đang Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Chỉ Có Thể Cập Nhật Hoặc Xóa BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("INSERT INTO bottuongtac SET 
+			@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO bottuongtac SET 
 				`idfb` = '".$idfb."', 
 				`token` = '".$token."',  
 				`ten` = '".$_SESSION[ten]."'
@@ -253,20 +253,20 @@ if ($_POST && $_SESSION[idfb])
 		}
 		elseif ($yeucau == "UP") 
 		{
-			$res = @mysql_query("SELECT * FROM bottuongtac WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM bottuongtac WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("UPDATE bottuongtac SET `token` = '".$token."' WHERE `idfb` = ".$idfb);
+			@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE bottuongtac SET `token` = '".$token."' WHERE `idfb` = ".$idfb);
 			die('SUCCESS: Cập Nhật BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cập Nhật BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}
 		elseif ($yeucau == "HUY") 
 		{
-			$res = @mysql_query("SELECT * FROM bottuongtac WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM bottuongtac WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("DELETE FROM bottuongtac
+			@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM bottuongtac
 			            WHERE
 			               idfb = '".$idfb."'
 			         ");
@@ -280,22 +280,22 @@ if ($_POST && $_SESSION[idfb])
 	elseif ($loai == "bottralike") 
 	{
 		if($yeucau == "OK"){
-			$res = @mysql_query("SELECT * FROM bottralike WHERE idfb = $idfb");
-			if (mysql_num_rows($res) > 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM bottralike WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) > 0) {
 				die('ERROR: Bạn Đang Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi.<script type="text/javascript">toarst("error","Bạn Đang Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Chỉ Có Thể Cập Nhật Hoặc Xóa BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("INSERT INTO bottralike SET 
+			@mysqli_query($GLOBALS["___mysqli_ston"], "INSERT INTO bottralike SET 
 				`idfb` = '".$idfb."', 
 				`token` = '".$token."', 
 				`ten` = '".$_SESSION[ten]."'
 				");
 			die('SUCCESS: Cài Đặt BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Lưu Ý: Khi Token Ko Còn Sử Dụng Được Chúng Tôi Sẽ Tự Động Xóa Token Của Bạn Tại Hệ Thống Lúc Đó Bạn Phải Cài Đặt Lại. ^_^ <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cài Đặt BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "UP") {
-			$res = @mysql_query("SELECT * FROM bottralike WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM bottralike WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("UPDATE bottralike
+			@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE bottralike
 			         SET
 			            `token` = '".$token."'
 			         WHERE
@@ -304,11 +304,11 @@ if ($_POST && $_SESSION[idfb])
 			die('SUCCESS: Cập Nhật BOT Thành Công. BOT Sẽ Hoạt Động Từ 5-10 Phút Tới. <br /> Cập Nhật BOT Thường Xuyên Để BOT Hoạt Động Tốt Nhất. <script type="text/javascript">toarst("success","Bạn Đã Tiến Hành Cập Nhật BOT Thành Công Tại Hệ Thống. Vui Lòng Không Sử Dụng Chức Năng Này Tại Các Website Khác Tránh Tình Trạng Die Token.","Lời Nhắn Từ Hệ Thống")</script><meta http-equiv="refresh" content="3">');
 		}elseif ($yeucau == "HUY") 
 		{
-			$res = @mysql_query("SELECT * FROM bottralike WHERE idfb = $idfb");
-			if (mysql_num_rows($res) <= 0) {
+			$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM bottralike WHERE idfb = $idfb");
+			if (mysqli_num_rows($res) <= 0) {
 				die('ERROR: Bạn Không Sử Dụng BOT Trên Hệ Thống Của Chúng Tôi. Chọn ON Để Tiến Hành Cài Đặt BOT<script type="text/javascript">toarst("error","Bạn Không Sử Dụng BOT Trên Hệ Thống. Hiện Tại Bạn Phải Cài Đặt BOT.","Thông Báo Lỗi")</script>');
 			}
-			@mysql_query("DELETE FROM bottralike
+			@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM bottralike
 			            WHERE
 			               idfb = '".$idfb."'
 			         ");
