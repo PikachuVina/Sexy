@@ -80,7 +80,7 @@
 						<ul class="nav navbar-nav">
 							<li>
 								<a onclick="toarst(&quot;success&quot;,&quot;Hiện Tại Có <?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `online` ORDER BY RAND()")); ?> Người Đang Online.&quot;,&quot;Đang Online&quot;)" class="dropdown-toggle" data-toggle="dropdown">
-									<i class="fa fa-user-o" style="color:red;"></i><sup class="label label-danger" style="border-radius: 15px;">Onl <?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `online` ORDER BY RAND()")); 0); ?></sup>
+									<i class="fa fa-user-o" style="color:red;"></i><sup class="label label-danger" style="border-radius: 15px;">Onl <?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `online` ORDER BY RAND()")); ?></sup>
 									<ul class="dropdown-menu">
 									<?php 
                                     $req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `online`"); 
@@ -93,7 +93,7 @@
 							</li>
 							<li>
 								<a onclick="toarst(&quot;success&quot;,&quot;Hiện Tại Có <?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `shoutbox` ORDER BY RAND()")); ?> Tin Nhắn Trong Chatbox.&quot;,&quot;Số Tin Nhắn&quot;)">
-									<i class="fa fa-envelope-o" style="color:blue;"></i><sup class="label label-info" style="border-radius: 15px;">New <?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM shoutbox"), 0); ?></sup>
+									<i class="fa fa-envelope-o" style="color:blue;"></i><sup class="label label-info" style="border-radius: 15px;">New <?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `shoutbox` ORDER BY RAND()")); ?></sup>
 								</a>
 							</li>
 							<li>
