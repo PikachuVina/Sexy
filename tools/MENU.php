@@ -2,16 +2,18 @@
                             <div class="col-md-12">
                                 <div class="panel panel-white">
                                     <div class="panel-heading clearfix">
-                                        <h3 class="panel-title">Fade effect</h3>
+                                        <h3 class="panel-title">Chức Năng</h3>
                                     </div>
                                     <div class="panel-body">
                                         <div role="tabpanel">
                                             <!-- Nav tabs -->
                                             <ul class="nav nav-tabs" role="tablist">
-                                                <li role="presentation" class="active"><a href="#tab5" role="tab" data-toggle="tab">Tab 1</a></li>
-                                                <li role="presentation"><a href="#tab6" role="tab" data-toggle="tab">Tab 2</a></li>
-                                                <li role="presentation"><a href="#tab7" role="tab" data-toggle="tab">Tab 3</a></li>
-                                                <li role="presentation"><a href="#tab8" role="tab" data-toggle="tab">Tab 4</a></li>
+                                                <li role="presentation" class="active"><a href="#tab5" role="tab" data-toggle="tab"><i class="fa fa-yelp"></i> Menu Auto</a></li>
+                                                <li role="presentation"><a href="#tab6" role="tab" data-toggle="tab"><i class="fa fa-reddit"></i> Menu Bot</a></li>
+                                                <li role="presentation"><a href="#tab7" role="tab" data-toggle="tab"><i class="fa fa-bomb"></i> Menu Bão</a></li>
+                                                <li role="presentation"><a href="#tab8" role="tab" data-toggle="tab"><i class="fa fa-weixin"></i> Menu Simsimi</a></li>
+                                                <li role="presentation"><a href="#tab9" role="tab" data-toggle="tab"><i class="fa fa-money"></i> Menu VipMember</a></li>
+                                                <li role="presentation"><a href="#tab10" role="tab" data-toggle="tab"><i class="fa fa-yelp"></i> Menu Khác</a></li>
                                             </ul>
                                             <!-- Tab panes -->
                                             <div class="tab-content">
@@ -26,6 +28,12 @@
                                                     <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane fade" id="tab8">
+                                                    <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</p>
+                                                </div>
+												<div role="tabpanel" class="tab-pane fade" id="tab9">
+                                                    <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</p>
+                                                </div>
+												<div role="tabpanel" class="tab-pane fade" id="tab10">
                                                     <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</p>
                                                 </div>
                                             </div>
