@@ -95,7 +95,7 @@ if($_GET['ref']){
                         </div>
                     </div><!-- Row -->
 	                     <div class="row">
-                        <div class="col-lg-5 col-md-6">
+                        <div class="col-lg-5 col-md-8">
                             <div class="panel panel-white">
                                 <div class="panel-heading clearfix">
                                     <h4 class="panel-title">Đăng Nhập</h4>
@@ -161,22 +161,7 @@ if($_GET['ref']){
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="panel panel-white">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">Inbox</h4>
-                                    <div class="panel-control">
-                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Reload" class="panel-reload"><i class="icon-reload"></i></a>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="inbox-widget slimscroll">
-                                    <div id="datachat">Đang tải tin nhắn</div> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-						<div class="col-lg-3 col-md-6">
+						<div class="col-lg-3 col-md-4">
                             <div class="panel twitter-box">
                                 <div class="panel-body">
                                     <div class="live-tile" data-mode="flip" data-speed="750" data-delay="3000">
@@ -287,7 +272,7 @@ if($_GET['ref']){
 								</div>
 							</div>				
 						</div>
-                        <div class="col-lg-4 col-md-12">
+                        <div class="col-lg-12 col-md-12">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">KEY SEARCH</h4>
