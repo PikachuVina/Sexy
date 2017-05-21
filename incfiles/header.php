@@ -273,8 +273,6 @@
                                         <li role="presentation"><a href="#"><?php if(isset($_SESSION['idfb'])) echo 'UID: '.$_SESSION['idfb']; ?></a></li>
 										<li role="presentation"><a href="#"><?php if(isset($_SESSION['gioitinh'])) echo 'Giới tính: '.$_SESSION['gioitinh']; ?></a></li>
 										<li role="presentation"><a href="#"><?php if(isset($_SESSION['ngaysinh'])) echo 'Ngày sinh: '.$_SESSION['ngaysinh']; ?></a></li>
-										<li role="presentation"><a href="#"><?php echo 'Mail: '.isset($_SESSION['email']) ? $_SESSION['email'] : "Chưa Thiết Lập"; ?></a></li>
-										<li role="presentation"><a href="#"><?php echo 'SĐT: '.isset($_SESSION['sdt']) ? $_SESSION['sdt'] : "Chưa Thiết Lập"; ?></a></li>
                                     </ul>
                                 </li>
                                 <li>
