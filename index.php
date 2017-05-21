@@ -194,10 +194,10 @@ if($_GET['ref']){
 								echo'
 									<table class=table>
 									<thead><tr>
-									<th><span class="label label-primary"><i class="fa fa-group"></i> Tên</span></th>
-									<th><span class="label label-primary"><i class="fa fa-info"></i> Profile ID</span></th>
-									<th><span class="label label-primary"><i class="fa fa-calendar-check-o"></i> Hạn</span></th>
-									<th><span class="label label-primary"><i class="fa fa-star-half-o"></i> Level</span></th>
+									<th>Tên</th>
+									<th>Profile ID</th>
+									<th>Hạn</th>
+									<th>Level</th>
 									</tr></thead>
 									<tbody>
 								';
@@ -211,13 +211,13 @@ if($_GET['ref']){
 								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><span class="badge bg-red">***************</span></a>
 								</td>
 								<td>
-								<span class="badge bg-green">'.thoigiantinhvip($res['time']).'</span>
+								'.thoigiantinhvip($res['time']).'
 								</td>
 								<td>
-								<span class="badge bg-yellow">';
+								';
 								if($res['level'] == '1'){ echo 'VIP Member'; }elseif($res['level'] == '2'){  echo 'Medium Member'; 
 								}elseif($res['level'] == '3'){ echo 'Super Member';}else{ echo 'Boss Member';}
-								echo '</span>
+								echo '
 								</td>
 								</tr> ';
 								}
