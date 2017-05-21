@@ -1,10 +1,10 @@
-<?php  
-$res = @mysql_query("SELECT * FROM `siminboxcanhan` WHERE `idfb`= '".$_SESSION['idfb']."'");
-if(@mysql_num_rows($res) > 0){
-$key = 1;
-}else{
-$key = 0;
-}
+<?php   
+$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `siminboxcanhan` WHERE `idfb`= '".$_SESSION['idfb']."'"); 
+if(@mysqli_num_rows($res) > 0){ 
+$key = 1; 
+}else{ 
+$key = 0; 
+} 
 ?>
 <div class="col-md-12">
 	<div class="box box-success">

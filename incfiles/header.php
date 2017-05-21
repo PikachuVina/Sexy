@@ -82,12 +82,12 @@
 								<a onclick="toarst(&quot;success&quot;,&quot;Hiện Tại Có <?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM online"), 0); ?> Người Đang Online.&quot;,&quot;Đang Online&quot;)" class="dropdown-toggle" data-toggle="dropdown">
 									<i class="fa fa-user-o" style="color:red;"></i><sup class="label label-danger" style="border-radius: 15px;">Onl <?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM online"), 0); ?></sup>
 									<ul class="dropdown-menu">
-									<?php
-									$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `online`"); 
+									<?php 
+                                    $req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `online`"); 
                                     while($res = mysqli_fetch_assoc($req)){ 
                                         echo'<a class="btn btn-danger btn-xs dropdown-toggle">'.$res['ten'].'</a> '; 
-                                    }
-									?>
+                                    } 
+                                    ?> 
 									</ul>
 								</a>
 							</li>
@@ -164,13 +164,13 @@
 						<li class="treeview">
 							<a style="color:green;"><i class="fa fa-reddit"></i> <span>MENU BOT</span> <sup class="label label-success">BOT</sup><i class="fa fa-angle-left pull-right"></i></a>
 							<ul class="treeview-menu">
-								<li><a href="/Bot-like.html">BOT LIKE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `botlike`"), 0); ?></span></a></li>
-								<li><a href="/Bot-exlike.html">BOT TRAO ĐỔI LIKE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `botex`"), 0); ?></span></a></li>
-								<li><a href="/Bot-exlove.html">BOT TRAO ĐỔI LOVE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `botexlove`"), 0); ?></span></a></li>
-								<li><a href="/Bot-camxuc.html">BOT CẢM XÚC <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `botcamxuc`"), 0); ?></span></a></li>
-								<li><a href="/Bot-cmt.html">BOT BÌNH LUẬN <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `botcmt`"), 0); ?></span></a></li>
-								<li><a href="/Bot-tralike.html">BOT TRẢ LIKE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `bottralike`"), 0); ?></span></a></li>
-								<li><a href="/Bot-tuongtac.html">BOT TƯƠNG TÁC <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `bottuongtac`"), 0); ?></span></a></li>
+                                <li><a href="/Bot-like.html">BOT LIKE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `botlike`"), 0); ?></span></a></li> 
+                                <li><a href="/Bot-exlike.html">BOT TRAO ĐỔI LIKE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `botex`"), 0); ?></span></a></li> 
+                                <li><a href="/Bot-exlove.html">BOT TRAO ĐỔI LOVE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `botexlove`"), 0); ?></span></a></li> 
+                                <li><a href="/Bot-camxuc.html">BOT CẢM XÚC <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `botcamxuc`"), 0); ?></span></a></li> 
+                                <li><a href="/Bot-cmt.html">BOT BÌNH LUẬN <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `botcmt`"), 0); ?></span></a></li> 
+                                <li><a href="/Bot-tralike.html">BOT TRẢ LIKE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `bottralike`"), 0); ?></span></a></li> 
+                                <li><a href="/Bot-tuongtac.html">BOT TƯƠNG TÁC <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `bottuongtac`"), 0); ?></span></a></li>
 							</ul>
 						</li>
 						<li class="treeview">
@@ -184,10 +184,10 @@
 						<li class="treeview">
 							<a style="color:orange;"><i class="fa fa-tencent-weibo"></i> <span class="nav-label">MENU SIM</span> <sup class="label label-warning">SIM</sup><i class="fa fa-angle-left pull-right"></i></a>
 							<ul class="treeview-menu">
-								<li><a href="/Sim-status.html">COMMENT STATUS <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `simcmt`"), 0); ?></span></a></li>
-								<li><a href="/Sim-feed.html">COMMENT NEWFEED <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `simcmtfeed`"), 0); ?></span></a></li>
-								<li><a href="/Sim-inboxcanhan.html">INBOX CÁ NHÂN <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `siminboxcanhan`"), 0); ?></span></a></li>
-								<li><a href="/Sim-inboxpage.html">INBOX FANPAGE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `siminboxpage`"), 0); ?></span></a></li>
+                                <li><a href="/Sim-status.html">COMMENT STATUS <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `simcmt`"), 0); ?></span></a></li> 
+                                <li><a href="/Sim-feed.html">COMMENT NEWFEED <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `simcmtfeed`"), 0); ?></span></a></li> 
+                                <li><a href="/Sim-inboxcanhan.html">INBOX CÁ NHÂN <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `siminboxcanhan`"), 0); ?></span></a></li> 
+                                <li><a href="/Sim-inboxpage.html">INBOX FANPAGE <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `siminboxpage`"), 0); ?></span></a></li>
 							</ul>
 						</li>
 						<li class="treeview">

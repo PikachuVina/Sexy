@@ -488,18 +488,18 @@
 					<th><span class="label label-primary"><i class="fa fa-star-half-o"></i> Level</span></th>
 					</tr></thead>
 					<tbody>';
-                    $req = mysql_query("SELECT * FROM `vip` LIMIT 10");
-                    while($res = mysql_fetch_assoc($req)) {
-                    echo'<tr><td><a href="https://www.facebook.com/'.$res['idfb'].'" target="_blank" style="color: red;"><img src="/img/vip.gif"><b>'.$res['ten'].'</b></a>
-                    </td> <td><span class="badge bg-red">'.$res['idfb'].'</span></td> <td><span class="badge bg-green">'.thoigiantinhvip($res['time']).'</span></td><td><span class="badge bg-yellow">';
-                    if($res['level'] == '1'){ echo 'VIP Member'; }elseif($res['level'] == '2'){  echo 'Medium Member'; 
-                    }elseif($res['level'] == '3'){ echo 'Super Member';}else{ echo 'Boss Member';}echo '</span></td></tr> ';
-                    }
-                    echo'</tbody> </table>';
+                    $req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` LIMIT 10"); 
+                    while($res = mysqli_fetch_assoc($req)) { 
+                    echo'<tr><td><a href="https://www.facebook.com/'.$res['idfb'].'" target="_blank" style="color: red;"><img src="/img/vip.gif"><b>'.$res['ten'].'</b></a> 
+                    </td> <td><span class="badge bg-red">'.$res['idfb'].'</span></td> <td><span class="badge bg-green">'.thoigiantinhvip($res['time']).'</span></td><td><span class="badge bg-yellow">'; 
+                    if($res['level'] == '1'){ echo 'VIP Member'; }elseif($res['level'] == '2'){  echo 'Medium Member';  
+                    }elseif($res['level'] == '3'){ echo 'Super Member';}else{ echo 'Boss Member';}echo '</span></td></tr> '; 
+                    } 
+                    echo'</tbody> </table>'; 
                     ?>
 	       </div>
 	       <div class="box-footer">
-                    <center>Hiện Tại Có <span class="label label-default"><?php echo mysql_result(mysql_query("SELECT COUNT(*) FROM `vip`"), 0); ?></span> Người Dùng VIP Trên Hệ Thống.</center>
+                    <center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `vip`"),  0); ?></span> Người Dùng VIP Trên Hệ Thống.</center>
 	       </div>
 	  </div>				
      </div><!--.col-md-6-->
@@ -528,8 +528,8 @@
 					</tr>
 					</thead>
 					<tbody>';
-                    $res = mysql_query("SELECT * FROM `taikhoan` ORDER BY `id` DESC LIMIT 10");
-                    while ($post = mysql_fetch_array($res)){
+                    $res = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` ORDER BY `id` DESC LIMIT 10"); 
+                    while ($post = mysqli_fetch_array($res)){ 
 					echo'<tr><div class="col-xs-2 col-md-2">
 					<td><a href="https://www.facebook.com/profile.php?id='.$post[idfb].'" target="_blank"><img src="/img/new.gif"><img src="https://graph.facebook.com/'.$post[idfb].'/picture?width=10&amp;height=10" alt="'.$post[ten].'" class="img-circle img-thumbnail" width="30" height="30"></a></td>
 					<td><a href="https://www.facebook.com/profile.php?id='.$post[idfb].'" target="_blank"><b><font style="color: red;">'.$post[ten].'</font></b></a></td>
@@ -541,7 +541,7 @@
                     ?>
 	       </div>
 	       <div class="box-footer">
-                    <center>Hiện Tại Có <span class="label label-default"><?php echo mysql_result(mysql_query("SELECT COUNT(*) FROM `taikhoan`"), 0); ?></span> Thành Viên Trên Hệ Thống.</center>
+                    <center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `taikhoan`"),  0); ?></span> Thành Viên Trên Hệ Thống.</center>
 	       </div>
 	  </div>				
      </div>

@@ -1,0 +1,7 @@
+{
+    "name": "hihi/ haha",
+    "require": {
+		"ext-gd": "*",
+		"ext-mbstring": "*"
+    }
+}

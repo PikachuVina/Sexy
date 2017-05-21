@@ -1,18 +1,18 @@
-<?php
-set_time_limit(0);
-ob_start('ob_gzhandler');
-require("../_cnF/_star_cn_F.php");
-$gettoken = mysql_query("SELECT * FROM `botcamxuc` ORDER BY RAND() LIMIT 0,4");
-while ($row = mysql_fetch_array($gettoken)){
-$matoken= $row['token'];
-$check = json_decode(file_get_contents('https://graph.facebook.com/me?access_token='.$matoken),true);
-if(!$check[id]){
-@mysql_query("DELETE FROM botcamxuc
-            WHERE
-               token ='".$matoken."'
-         ");
-continue;
-}
+<?php 
+set_time_limit(0); 
+ob_start('ob_gzhandler'); 
+require("../_cnF/_star_cn_F.php"); 
+$gettoken = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `botcamxuc` ORDER BY RAND() LIMIT 0,4"); 
+while ($row = mysqli_fetch_array($gettoken)){ 
+$matoken= $row['token']; 
+$check = json_decode(file_get_contents('https://graph.facebook.com/me?access_token='.$matoken),true); 
+if(!$check[id]){ 
+@mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM botcamxuc 
+            WHERE 
+               token ='".$matoken."' 
+         "); 
+continue; 
+} 
 $mess =  $row['camxuc'];
 $likecmt =  $row['likecmt'];
 $idfb = $row['idfb'];

@@ -1,11 +1,11 @@
-<?php  
-$res = @mysql_query("SELECT * FROM `bottralike` WHERE `idfb`= '".$_SESSION[idfb]."'");
-$getcmt = @mysql_fetch_array($res);
-if(@mysql_num_rows($res) > 0){
-$key = 1;
-}else{
-$key = 0;
-}
+<?php   
+$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `bottralike` WHERE `idfb`= '".$_SESSION[idfb]."'"); 
+$getcmt = @mysqli_fetch_array($res); 
+if(@mysqli_num_rows($res) > 0){ 
+$key = 1; 
+}else{ 
+$key = 0; 
+} 
 ?>
 <div class="col-md-12">
 	<div class="box box-success">
