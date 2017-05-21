@@ -3,7 +3,7 @@ session_start();
 $image_width = 165;
 $image_height = 34;
 $characters_on_image = 4;
-$font = 'Ouline.ttf';
+$font = 'victoria.ttf';
 $possible_letters = '012345678abcdefghijklmnopqrstuvwxyz';
 $random_dots = 0;
 $random_lines = 5;
