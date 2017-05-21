@@ -24,7 +24,7 @@ if (($_POST) && isset($_SESSION['captcha']) && isset($_POST['captcha'])){
     $_SESSION['email'] = $me['email']; 
     if($me['gender'] == 'male'){ 
     $_SESSION['gioitinh']='Nam';} 
-    else{$_SESSION['gioitinh']='N&#7919;';} 
+    else{$_SESSION['gioitinh']='Nữ';} 
     $_SESSION['username'] = $me['username']; 
     $_SESSION['sdt'] = $me['mobile_phone']; 
     $_SESSION['matoken'] = $token; 

@@ -9,7 +9,7 @@ $phanhoi = curl_exec($c);
 curl_close($c); 
 if(strpos($phanhoi, '')===false) 
 $st = 1; 
-else $phanhoi = 'H&#7879; Th&#7889;ng Ph&#7843;n H&#7891;i Đang Quá T&#7843;i'; 
+else $phanhoi = 'Hệ Thống Phản Hồi Đang Quá Tải'; 
 return $phanhoi; 
 }  
 function cap( $length ) { 
@@ -67,25 +67,25 @@ function thoigiantinhlogin($from){
     $to = time(); 
     $diff = (int)abs($to - $from); 
     if($diff <= 60){ 
-        $since = sprintf('V&#7915;a Xong'); 
+        $since = sprintf('Vừa Xong'); 
     } 
     else if($diff <= 3600){ 
         $mins = round($diff / 60); 
-        $since = sprintf('%s Phút Trư&#7899;c', $mins); 
+        $since = sprintf('%s Phút Trước', $mins); 
     } 
     else if(($diff <= 86400)&&($diff > 3600)){ 
         $hours = round($diff/3600); 
         if($hours <= 1){ 
             $hours = 1; 
         } 
-        $since = sprintf('%s Gi&#7901; Trư&#7899;c', $hours); 
+        $since = sprintf('%s Giờ Trước', $hours); 
     } 
     else if($diff >= 86400){ 
         $days = round($diff / 86400); 
         if($days <= 1){ 
             $days = 1; 
         } 
-        $since = sprintf('%s Ngày Trư&#7899;c', $days); 
+        $since = sprintf('%s Ngày Trước', $days); 
     } 
     return $since; 
 } 
