@@ -15,23 +15,6 @@ if($_GET['ref']){
 	$_SESSION['refn'] = $name;	
 }
 ?>
-					<?php if(!$mobile){ if(!$_SESSION['quangcao']){ $_SESSION['quangcao'] = true; ?>
-						<div class="box box-success">
-							<div id="homepage">
-								<div id="content" style="position: relative;overflow: hidden">
-									<div id="ET-modal-background" style="position: fixed;width: 100vw; height: 100vh; background-color: black; z-index: 0; top: 0; left: 0 ; opacity: 0.4; z-index: 1000;"></div>
-									<div id="ET-container">
-										<div id="ET-grad1" class="ET-grad"></div>
-										<img id="ET-border-tittle" src="./img/border-tittle.png">
-										<img id="ET-horoscope" src="./img/horoscope.png">
-										<div id="ET-datepicker"></div>
-										<a href="https://www.facebook.com/system.hdpro" target="_blank"><div id="ET-confirmBtn"></div></a>
-										<button id="ET-close" class="ET-quit ET-buttons" data-widget="remove">X</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					<?php } } ?>
 						<div class="col-md-7">
 							<div class="box box-info">
 								<div class="box-title box-header with-border">
