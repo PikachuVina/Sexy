@@ -128,7 +128,7 @@
                         </div>
 						
 
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-md-12">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">Người Dùng Vip</h4>
@@ -177,7 +177,7 @@
                         </div>
 
 
-                        <div class="col-lg-6 col-md-6">
+                        <div class="col-md-12">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">Người Dùng Mới</h4>
