@@ -269,12 +269,12 @@
 								print'<img src="https://graph.facebook.com/4/picture" class="img-circle avatar" width="40" height="40">';}?>
                                     </a>
                                     <ul class="dropdown-menu dropdown-list" role="menu">
-                                        <li role="presentation"><?php echo  isset($_SESSION['idfb']) ? '<i class="fa fa-money"></i> '.number_format($vnds['vnd'])." VNĐ" : " Bạn Chưa Đăng Nhập";?></li>
-                                        <li role="presentation"><?php if(isset($_SESSION['idfb'])) echo $_SESSION['idfb']; ?></li>
-										<li role="presentation"><?php if(isset($_SESSION['gioitinh'])) echo $_SESSION['gioitinh']; ?></li>
-										<li role="presentation"><?php if(isset($_SESSION['ngaysinh'])) echo $_SESSION['ngaysinh']; ?></li>
-										<li role="presentation"><?php echo isset($_SESSION['email']) ? $_SESSION['email'] : "Chưa Thiết Lập"; ?></li>
-										<li role="presentation"><?php echo isset($_SESSION['sdt']) ? $_SESSION['sdt'] : "Chưa Thiết Lập"; ?></li>
+                                        <li role="presentation"><a href="#"><?php echo  isset($_SESSION['idfb']) ? 'Tài sản: '.number_format($vnds['vnd'])." VNĐ" : " Bạn Chưa Đăng Nhập";?></a></li>
+                                        <li role="presentation"><a href="#"><?php if(isset($_SESSION['idfb'])) echo 'UID: '.$_SESSION['idfb']; ?></a></li>
+										<li role="presentation"><a href="#"><?php if(isset($_SESSION['gioitinh'])) echo 'Giới tính: '.$_SESSION['gioitinh']; ?></a></li>
+										<li role="presentation"><a href="#"><?php if(isset($_SESSION['ngaysinh'])) echo 'Ngày sinh: '.$_SESSION['ngaysinh']; ?></a></li>
+										<li role="presentation"><a href="#"><?php echo 'Mail: '.isset($_SESSION['email']) ? $_SESSION['email'] : "Chưa Thiết Lập"; ?></a></li>
+										<li role="presentation"><a href="#"><?php echo 'SĐT: '.isset($_SESSION['sdt']) ? $_SESSION['sdt'] : "Chưa Thiết Lập"; ?></a></li>
                                     </ul>
                                 </li>
                                 <li>
