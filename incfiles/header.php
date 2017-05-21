@@ -152,7 +152,7 @@
                         </a>
                     </div>
                     <div class="logo-box">
-                        <a href="/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-SMS.html" class="logo-text"><span>Bót.Vn</span></a>
+                        <a href="/" class="logo-text"><span>Bót.Vn</span></a>
                     </div><!-- Logo Box -->
                     <div class="search-button">
                         <a href="javascript:void(0);" class="waves-effect waves-button waves-classic show-search"><i class="fa fa-search"></i></a>
@@ -288,7 +288,7 @@
             <div class="page-sidebar sidebar">
                 <div class="page-sidebar-inner slimscroll">
                     <ul class="menu accordion-menu">
-                        <li class="active"><a href="/BOTVN-AUTO-AND-BOT-LIKE-FACEBOOK-trangchu.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span><p>Dashboard</p></a></li>
+                        <li class="active"><a href="/" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span><p>Dashboard</p></a></li>
                         <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-list"></span><p>Menu Bot</p><span class="arrow"></span></a>
                             <ul class="sub-menu">
                                 <li><a href="/Bot-like.html">BOT LIKE <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `botlike` ORDER BY RAND()")); ?></span></a></li> 
