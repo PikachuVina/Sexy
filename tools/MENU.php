@@ -18,8 +18,72 @@
                                             <!-- Tab panes -->
                                             <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active fade in" id="tab5">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
-                                                       
+<div class="col-md-4">
+					<div class="box box-danger" style="background-color:#00c0ef;">
+					     <div class="box-title box-header with-border">
+					          <center style="font-size: 20px;">AUTO LIKE</center>
+							  <center style="font-size: 10px;">Tăng Like Tự Động</center>
+					     </div>
+					     <div class="box-body">
+						  <a href="/Auto-like.html" class="btn btn-block  btn-success">Sử Dụng</a>
+					     </div>
+					</div>
+				   </div>
+				   <div class="col-md-4">
+					<div class="box box-danger" style="background-color:#00c0ef;">
+					     <div class="box-title box-header with-border">
+						  <center style="font-size: 20px;">AUTO CẢM XÚC</center>
+						  <center style="font-size: 10px;">Tăng Cảm Xúc Tự Động</center>
+					     </div>
+					     <div class="box-body">
+						  <a href="/Auto-camxuc.html" class="btn btn-block btn-success">Sử Dụng</a>
+					     </div>
+					</div>
+				   </div>
+				   <div class="col-md-4">
+					<div class="box box-danger" style="background-color:#00c0ef;">
+					     <div class="box-title box-header with-border">
+						  <center style="font-size: 20px;">AUTO COMMENT</center>
+						  <center style="font-size: 10px;">Tăng Bình Luận Tự Động</center>
+					     </div>
+					     <div class="box-body">
+						  <a class="btn btn-block btn-success" href="/Auto-cmt.html" >Sử Dụng</a>
+					     </div>
+					</div>
+				   </div>
+				   <div class="col-md-4">
+					<div class="box box-danger" style="background-color:#00c0ef;">
+					     <div class="box-title box-header with-border">
+						  <center style="font-size: 20px;">AUTO SHARE</center>
+						  <center style="font-size: 10px;">Tăng Chia Sẽ Tự Động</center>
+					     </div>
+					     <div class="box-body">
+						   <a class="btn btn-block btn-success" href="/Auto-share.html">Sử Dụng</a>
+					     </div>
+					</div>
+				    </div>
+				    <div class="col-md-4">
+					<div class="box box-danger" style="background-color:#00c0ef;">
+					     <div class="box-title box-header with-border">
+						  <center style="font-size: 20px;">AUTO SUB</center>
+						  <center style="font-size: 10px;">Tăng Theo Dõi Tự Động</center>
+					     </div>
+					     <div class="box-body">
+					          <a class="btn btn-block btn-success" href="/Auto-sub.html">Sử Dụng</a>
+					     </div>
+					</div>
+				    </div>
+				    <div class="col-md-4">
+					<div class="box box-danger" style="background-color:#00c0ef;">
+					     <div class="box-title box-header with-border">
+						  <center style="font-size: 20px;">AUTO KẾT BẠN</center>
+						  <center style="font-size: 10px;">Tăng Kết Bạn Tự Động</center>
+					     </div>
+					     <div class="box-body">
+						  <a class="btn btn-block btn-success" href="/Auto-friend.html" >Sử Dụng</a>
+					     </div>
+					</div>
+				    </div>   
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane fade" id="tab6">
                                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
