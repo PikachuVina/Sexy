@@ -1,4 +1,3 @@
-
 <?php 
 include("_star_cn_F.php"); 
 $config['user'] = 'bmn2312'; 
@@ -7,7 +6,7 @@ $config['pass'] = 'admin';
 if ($_SERVER['PHP_AUTH_USER'] != $config['user'] || $_SERVER['PHP_AUTH_PW'] != $config['pass']){ 
 header('WWW-Authenticate: Basic realm="Login Install"'); 
 header('HTTP/1.0 401 Unauthorized'); 
-die('<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><center>Cút Ra Chỗ Khác Chơi!!!</center>'); 
+die('<center>Cút Choi!!!</center>'); 
 } 
 mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `online` ( 
   `time` int(15) NOT NULL, 
@@ -229,4 +228,4 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `shoutbox` 
   PRIMARY KEY (`id`) 
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-?> 
+?>
