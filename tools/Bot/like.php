@@ -8,12 +8,12 @@ $key = 0;
 }
 ?>
 <div class="col-md-12">
-	<div class="box box-success">
-		<div class="box-title box-header with-border">
+<div class="panel panel-white">
+<div class="panel-heading">
 			<h4><i class="fa fa-thumbs-up" aria-hidden="true"></i> Bot Like - Robot Tự Động Like</h4>
 			
 		</div>
-		<div class="box-body">
+		<div class="panel-body">
 			<div class="alert alert-info" style="font-size: 15px; background-color: rgba(157, 248, 89, 0.62); border-color: rgba(157, 248, 89, 0.62);">
                               		<?php echo ($key == 1) ? 'Chào Bạn<strong> '.$_SESSION[ten].'</strong>. Hiện Tại Bạn <strong style="color: red; font-size: 15px;"> Đã </strong> Cài Đặt Bot Trên Hệ Thống' : 'Chào Bạn <strong>'.$_SESSION[ten].'</strong>. Hiện Tại Bạn <strong style="color: red; font-size: 15px;"> Chưa </strong> Cài Đặt Bot Trên Hệ Thống'; ?>
                            	</div>
