@@ -158,11 +158,11 @@ if ($_GET['access_token'] ||  $_SESSION['ses_token']) {
 require('../incfiles/header.php'); 
 ?> 
 <div class="col-md-12"> 
-<div class="box box-success"> 
-<div class="box-title box-header with-border"> 
-<h4><i class="fa fa-key"></i> Nhập Captcha Để Tiếp Tục</h4> 
-</div> 
-<div class="box-body"> 
+                            <div class="panel panel-white">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Thành Viên Mới</h4>
+                                </div>
+                                <div class="panel-body">
 <? if($erros) 
 echo'<div class="col-md-12"> 
 <div class="alert alert-danger"> 
