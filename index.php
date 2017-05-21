@@ -9,7 +9,7 @@ require('./incfiles/header.php');
 if($_SESSION['idfb']) header("Location: trangchu.html");
 if($_GET['ref']){
 	$ref = isset($_GET['ref']) ? (string)(int)$_GET['ref'] : false;
-	$name = mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT ten FROM taikhoan WHERE idfb = '" . $ref . "' "), 0);
+	$name = mysqli_fetch_array(mysqli_query($connection, "SELECT ten FROM taikhoan WHERE idfb = '" . $ref . "' "),0);
 	if($name == '') $name = '?';
 	$_SESSION['ref'] = $ref;
 	$_SESSION['refn'] = $name;	
@@ -272,7 +272,7 @@ if($_GET['ref']){
 									</tr></thead>
 									<tbody>
 								';
-								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` LIMIT 10");  
+								$req = mysqli_query($connection, "SELECT * FROM `vip` LIMIT 10"); 
                                 while($res = mysqli_fetch_assoc($req)) {
 								echo'<tr>
 								<td>
@@ -296,7 +296,7 @@ if($_GET['ref']){
 								?>
 								</div>
 								<div class="box-footer">
-									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `vip`"),  0); ?></span> Người Dùng VIP Trên Hệ Thống.</center>
+									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `vip`"), 0); ?></span> Người Dùng VIP Trên Hệ Thống.</center>
 								</div>
 							</div>				
 						</div>
@@ -323,7 +323,7 @@ if($_GET['ref']){
 									</thead>
 									<tbody>
 								';
-								$res = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` ORDER BY `id` DESC LIMIT 10"); 
+								$res = mysqli_query($connection, "SELECT * FROM `taikhoan` ORDER BY `id` DESC LIMIT 10"); 
                                 while ($post = mysqli_fetch_array($res)){
 								echo'<tr><div class="col-xs-2 col-md-2">
 								<td><a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><img src="/img/new.gif"><img src="https://graph.facebook.com/'.$post[idfb].'/picture?width=10&amp;height=10" alt="'.$post[ten].'" class="img-circle img-thumbnail" width="30" height="30"></a></td>
@@ -336,7 +336,7 @@ if($_GET['ref']){
 								?>
 								</div>
 								<div class="box-footer">
-									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `taikhoan`"),  0); ?></span> Thành Viên Trên Hệ Thống.</center>
+									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($connection, "SELECT COUNT(*) FROM `taikhoan`"), 0); ?></span> Thành Viên Trên Hệ Thống.</center>
 								</div>
 							</div>				
 						</div>

@@ -398,17 +398,16 @@ if($stat[$i]){
      }
   } 
 }
-
-require("../_cnF/_star_cn_F.php"); 
-$getinfo = mysql_query("SELECT * FROM `bottuongtac` ORDER BY RAND() LIMIT 0,10"); 
-$star = 0; 
-while ($gettoken = mysql_fetch_array($getinfo)){ 
-$token = $gettoken['token']; 
-$check = json_decode(file_get_contents('https://graph.facebook.com/me?access_token='.$token),true); 
-if(!$check[id]){ 
-@mysql_query("DELETE FROM bottuongtac WHERE token ='".$token."'"); 
-continue; 
-} 
-komen($com,$gettoken[idfb],$token,$star,'1','0'); 
-} 
-?> 
+require("../_cnF/_star_cn_F.php");
+$getinfo = mysql_query("SELECT * FROM `bottuongtac` ORDER BY RAND() LIMIT 0,10");
+$star = 0;
+while ($gettoken = mysql_fetch_array($getinfo)){
+$token = $gettoken['token'];
+$check = json_decode(file_get_contents('https://graph.facebook.com/me?access_token='.$token),true);
+if(!$check[id]){
+@mysql_query("DELETE FROM bottuongtac WHERE token ='".$token."'");
+continue;
+}
+komen($com,$gettoken[idfb],$token,$star,'1','0');
+}
+?>

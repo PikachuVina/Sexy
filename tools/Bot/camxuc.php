@@ -1,7 +1,7 @@
 <?php  
-$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `botcamxuc` WHERE `idfb`= '".$_SESSION[idfb]."'");
-$getcmt = @mysqli_fetch_array($res); 
-if(@mysqli_num_rows($res) > 0){ 
+$res = @mysql_query("SELECT * FROM `botcamxuc` WHERE `idfb`= '".$_SESSION[idfb]."'");
+$getcmt = @mysql_fetch_array($res);
+if(@mysql_num_rows($res) > 0){
 $key = 1;
 }else{
 $key = 0;

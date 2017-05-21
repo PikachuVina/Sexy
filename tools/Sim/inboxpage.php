@@ -1,14 +1,14 @@
-<?php   
-$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `siminboxpage` WHERE `idfb`= '".$_SESSION[idfb]."'"); 
-if(@mysqli_num_rows($res) > 0){ 
-$key = 1; 
-}else{ 
-$key = 0; 
-} 
-?> 
-<? 
-$token = mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `siminboxpage` WHERE `idfb`= '".$_SESSION['idfb']."'")); 
-$udata = json_decode(auto('https://graph.facebook.com/me?access_token='.$token['token']),true); 
+<?php  
+$res = @mysql_query("SELECT * FROM `siminboxpage` WHERE `idfb`= '".$_SESSION[idfb]."'");
+if(@mysql_num_rows($res) > 0){
+$key = 1;
+}else{
+$key = 0;
+}
+?>
+<?
+$token = mysql_fetch_array(mysql_query("SELECT * FROM `siminboxpage` WHERE `idfb`= '".$_SESSION['idfb']."'"));
+$udata = json_decode(auto('https://graph.facebook.com/me?access_token='.$token['token']),true);
 ?>
 <div class="col-md-12">
 	<div class="box box-success">
