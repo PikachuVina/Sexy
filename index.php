@@ -336,7 +336,7 @@ if($_GET['ref']){
 								?>
 								</div>
 								<div class="box-footer">
-									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_fetch_array(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT COUNT(*) FROM `taikhoan`"),  0); ?></span> Thành Viên Trên Hệ Thống.</center>
+									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` ORDER BY RAND()")); ?></span> Thành Viên Trên Hệ Thống.</center>
 								</div>
 							</div>				
 						</div>
