@@ -34,13 +34,10 @@
                                 </div>    
                             </div>
 
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-md-12">
                             <div class="panel panel-white">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">Chat Box</h4>
-                                    <div class="panel-control">
-                                        <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Reload" class="panel-reload"><i class="icon-reload"></i></a>
-                                    </div>
                                 </div>
                                 <div class="panel-body">
 			<div class="input-group">
