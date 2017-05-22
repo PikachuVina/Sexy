@@ -70,10 +70,6 @@
 		</script>
 		<div class="wrapper">
 			<header class="main-header">
-				<a href="/" class="logo">
-					<span class="logo-mini"><font style="color:red;text-shadow: 0px 0px 0px rgb(17, 17, 17), 0px 0px 0.5em yellow, 0px 0px 0.4em yellow; font-weight:bold;"><i class="fa fa-star fa-spin"></i></font> <font style="color:blue;"><?=$text['vtat'];?></font></span>
-					<span class="logo-lg"><font style="color:red;text-shadow: 0px 0px 0px rgb(17, 17, 17), 0px 0px 0.5em yellow, 0px 0px 0.4em yellow; font-weight:bold;"><i class="fa fa-star fa-spin"></i></font> <font style="color:blue;"><?=$text['linkvh'];?></font></span>
-				</a>
 				<nav class="navbar navbar-static-top" role="navigation">
 					<a class="sidebar-toggle" data-toggle="offcanvas" role="button"><span class="sr-only"></span></a>
 					<div class="navbar-custom-menu">
