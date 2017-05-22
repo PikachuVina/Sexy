@@ -266,7 +266,7 @@ if($_GET['ref']){
 								?>
 								</div>
 								<div class="box-footer">
-									<center>Đây Là Top <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Thành Viên Ưu Tú Quảng Cáo Website.</center>
+									<center>Đây Là Top <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Thành Viên Ưu Tú Nhất Website.</center>
 								</div>
 							</div>				
 						</div>
