@@ -29,15 +29,15 @@ if ($_POST && $_SESSION[idfb]){
 		$thanhtien = $thoigian*$goivip;
                 $ngay = 86400;
                 $time = time()+$thoigian*$ngay;
-		$result= @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` WHERE `idfb` = $_SESSION[idfb]");
+		$result= @@mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` WHERE `idfb` = $_SESSION[idfb]");
 		$taikhoan = @mysqli_fetch_array($result, MYSQLI_ASSOC);
 		$vnd = $taikhoan[vnd];
 		if ($vnd<$thanhtien){
 		die('ERROR: Không Đủ Số Dư Để Thực Hiện Việc Mua Vip. Nếu Bạn Muốn Nạp Tiền Vui Lòng Vào<a href="Vip-naptien.html"> Đây</a><script type="text/javascript">toarst("error","Mua VIP Thất Bại! Tiền Trong Tài Khoản Không Đủ! Vui Lòng Nạp Thêm Để Thực Hiện Việc Mua Vip.","Thông Báo Lỗi")</script>');
 		}
-		$resvip= @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` WHERE `idfb` = $idfb");
+		$resvip= @@mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` WHERE `idfb` = $idfb");
 		if(mysqli_num_rows($resvip) < 1){	
-			@mysqli_query($GLOBALS["___mysqli_ston"], 
+			@@mysqli_query($GLOBALS["___mysqli_ston"], 
 			         "INSERT INTO 
 			            vip
 			         SET
@@ -47,7 +47,7 @@ if ($_POST && $_SESSION[idfb]){
 			            `time` = '" . $time . "',
 			            `timemua` = '" . time() . "'
 			      ");
-			@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE `taikhoan` SET `vnd` = `vnd` - $thanhtien WHERE `idfb` = $_SESSION[idfb]");
+			@@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE `taikhoan` SET `vnd` = `vnd` - $thanhtien WHERE `idfb` = $_SESSION[idfb]");
 			die('SUCCESS: Mua Vip Thành Công! Thông Tin Gói VIP <br />Tên Người Dùng: '.$tenfb.' <br /> ID Người Dùng: '.$idfb.' <br /> Gói VIP Sử Dụng: '.$tenvip.' <br /> Thời Gian Sử Dụng: '.$thoigian.' Ngày.<script type="text/javascript">toarst("success","Mua VIP Thành Công..","Thông Báo Lỗi")</script>');
 		}else{
 		die('ERROR: Mua Vip Thất Bại ! ID Trên Đã Sử Dụng VIP Tại Hệ Thống. Nếu Bạn Muốn Nâng Cấp Lên Gói Khác Vui Lòng Liên Hệ Admin<script type="text/javascript">toarst("error","Mua Vip Thất Bại! ID Trên Đã Sử Dụng VIP Tại Hệ Thống","Thông Báo Lỗi")</script>');
@@ -112,7 +112,7 @@ if ($_POST && $_SESSION[idfb]){
             $trangthai .= 'Mệnh Giá Thẻ Nạp: '.number_format($amount).' VNĐ<br/>';
             $trangthai .= 'Số Tiền Cộng Vào Tài Khoản: '.number_format($amount).' VNĐ<br/>';
             $trangthai .= 'Hoàn Thành Giao Dịch. Cám Ơn: '.$name.' Hẹn Gặp Lại.</center>';
-	    @mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE taikhoan SET vnd = vnd + $xu WHERE idfb = $_SESSION[idfb]");
+	    @@mysqli_query($GLOBALS["___mysqli_ston"], "UPDATE taikhoan SET vnd = vnd + $xu WHERE idfb = $_SESSION[idfb]");
 	    $file = "../modun_txt/carddung.log";
 	    $fh = @fopen($file,'a');
 	    @fwrite($fh,"Tai khoan: ".$tenfb.", ID Facebook: ".$idfb.", Loai the: ".$ten.", Menh gia: ".number_format($amount).", Thoi gian: ".$logtime);

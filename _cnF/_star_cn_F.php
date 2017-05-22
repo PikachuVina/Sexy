@@ -17,5 +17,5 @@ $connection = ($GLOBALS["___mysqli_ston"] = mysqli_connect($db_host, $db_user, $
 if (!$connection){ 
 die('Không Thể Kết Nối: ' . mysqli_error($GLOBALS["___mysqli_ston"]));} 
 mysqli_select_db($GLOBALS["___mysqli_ston"], $db_name) or die(mysqli_error($GLOBALS["___mysqli_ston"])); 
-mysqli_query($GLOBALS["___mysqli_ston"], "SET NAMES utf8"); 
+@mysqli_query($GLOBALS["___mysqli_ston"], "SET NAMES utf8"); 
 ?> 

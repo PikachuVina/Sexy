@@ -67,23 +67,23 @@ if(isset($_POST['mess'])){
 			@fwrite($opfile,$userid);
 			@fwrite($opfile,"\n");
 			@fclose($opfile);
-			mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","Thành Viên '.$username.' Vừa Định Tấn Công Hệ Thống Và Đã Bị Khoá. Vui Lòng Không Thực Hiện Theo Thành Viên Này!","'.$user_ip.'","'.$time.'")');
+			@mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","Thành Viên '.$username.' Vừa Định Tấn Công Hệ Thống Và Đã Bị Khoá. Vui Lòng Không Thực Hiện Theo Thành Viên Này!","'.$user_ip.'","'.$time.'")');
 			echo'<script type="text/javascript">toarst("success","Thành Công.","Lời Nhắn")</script>';
 			echo'<meta http-equiv="refresh" content="5;URL='.$text['link'].'" />';
 		}
 		else if(($_SESSION['idfb']=='100004294419791')&&(ereg('/xoa',strtolower($post)))){
-			mysqli_query($GLOBALS["___mysqli_ston"], 'DELETE FROM shoutbox');
-			mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","Admin vừa xóa chatbox.","'.$user_ip.'","'.$time.'")');
+			@mysqli_query($GLOBALS["___mysqli_ston"], 'DELETE FROM shoutbox');
+			@mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","Admin vừa xóa chatbox.","'.$user_ip.'","'.$time.'")');
 			echo'<script type="text/javascript">toarst("success","Xoá Chat Box Thành Công.","Lời Nhắn")</script>';
 		}
 		else{
-			mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","'.$message.'","'.$user_ip.'","'.$time.'")');
+			@mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","'.$message.'","'.$user_ip.'","'.$time.'")');
 			echo'<script type="text/javascript">toarst("success","Thành Công.","Lời Nhắn")</script>';
 		}
 	}
 }
  
-$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `shoutbox` ORDER BY `id` DESC LIMIT 30"); 
+$req = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `shoutbox` ORDER BY `id` DESC LIMIT 30"); 
 while($res = mysqli_fetch_assoc($req)) {
 	$res['user'] = str_replace('Bùi Mạnh Nghĩa','<font style="color:red;text-shadow: 0px 0px 0px rgb(17, 17, 17), 0px 0px 0.5em yellow, 0px 0px 0.4em yellow; font-weight:bold;">Bùi Mạnh Nghĩa <i class="fa fa-check-square" aria-hidden="true" tille="Đã Xác Minh"></i></font>', $res['user']);
 	$data = @file('../modun_txt/camxuc.log');

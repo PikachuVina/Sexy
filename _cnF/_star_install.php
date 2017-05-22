@@ -9,14 +9,14 @@ header('WWW-Authenticate: Basic realm="Login Install"');
 header('HTTP/1.0 401 Unauthorized'); 
 die('<center>À Được</center>'); 
 } 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `online` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `online` ( 
   `time` int(15) NOT NULL, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
   PRIMARY KEY (`time`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenandroid` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenandroid` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -24,7 +24,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenandro
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokeniphone` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokeniphone` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -32,16 +32,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokeniphon
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenios` ( 
-  `id` int(11) NOT NULL AUTO_INCREMENT, 
-  `idfb` varchar(32)  NOT NULL, 
-  `ten` varchar(32)  NOT NULL, 
-  `token` varchar(255)  NOT NULL, 
-  `cookie` varchar(1000), 
-  PRIMARY KEY (`id`) 
- ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
-"); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenhtc` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenios` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -50,7 +41,16 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenhtc` 
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenvip` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenhtc` ( 
+  `id` int(11) NOT NULL AUTO_INCREMENT, 
+  `idfb` varchar(32)  NOT NULL, 
+  `ten` varchar(32)  NOT NULL, 
+  `token` varchar(255)  NOT NULL, 
+  `cookie` varchar(1000), 
+  PRIMARY KEY (`id`) 
+ ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
+"); 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenvip` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -58,7 +58,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `tokenvip` 
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `taikhoan` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `taikhoan` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32) NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -68,7 +68,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `taikhoan` 
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `logbottralike` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `logbottralike` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idstt` varchar(1024) NOT NULL, 
   `idngta` varchar(1024) NOT NULL, 
@@ -78,7 +78,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `logbottral
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `bottralike` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `bottralike` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -86,14 +86,14 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `bottralike
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `block` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `block` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32) NOT NULL, 
   `thoigian` varchar(32) NOT NULL, 
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `simcmtfeed` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `simcmtfeed` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -101,7 +101,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `simcmtfeed
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `simcmt` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `simcmt` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -109,7 +109,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `simcmt` (
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `siminboxpage` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `siminboxpage` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -117,7 +117,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `siminboxpa
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `siminboxcanhan` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `siminboxcanhan` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -125,7 +125,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `siminboxca
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `vip` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `vip` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `ten` varchar(32)  NOT NULL, 
@@ -135,7 +135,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `vip` (
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `gioithieu` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `gioithieu` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32) NOT NULL, 
   `ten` varchar(32) NOT NULL, 
@@ -144,7 +144,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `gioithieu`
   PRIMARY KEY (`id`) 
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botlike` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botlike` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `token` varchar(255)  NOT NULL, 
@@ -153,7 +153,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botlike` (
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botex` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botex` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `token` varchar(255)  NOT NULL, 
@@ -162,7 +162,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botex` (
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botexlove` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botexlove` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `token` varchar(255)  NOT NULL, 
@@ -171,7 +171,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botexlove`
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botcamxuc` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botcamxuc` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `token` varchar(255)  NOT NULL, 
@@ -181,7 +181,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botcamxuc`
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botcmt` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botcmt` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `token` varchar(255)  NOT NULL, 
@@ -191,7 +191,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `botcmt` (
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `bottuongtac` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `bottuongtac` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `idfb` varchar(32)  NOT NULL, 
   `token` varchar(255)  NOT NULL, 
@@ -199,7 +199,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `bottuongta
   PRIMARY KEY (`id`) 
  ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `logsimcmt` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `logsimcmt` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `ten` varchar(255) NOT NULL, 
   `idstt` varchar(32) NOT NULL, 
@@ -209,7 +209,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `logsimcmt`
   PRIMARY KEY (`id`) 
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `logsimfeed` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `logsimfeed` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `ten` varchar(32) NOT NULL, 
   `idstt` varchar(32) NOT NULL, 
@@ -219,7 +219,7 @@ mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `logsimfeed
   PRIMARY KEY (`id`) 
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ; 
 "); 
-mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `shoutbox` ( 
+@mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `shoutbox` ( 
   `id` int(11) NOT NULL AUTO_INCREMENT, 
   `user` varchar(60) NOT NULL, 
   `user_id` varchar(60) NOT NULL, 

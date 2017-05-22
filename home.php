@@ -12,13 +12,13 @@ require("./_cnF/_star_online.php");
 if (!$_SESSION['idfb']) { 
      header("Location: index.html"); 
 } 
-$getTaikhoan = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM taikhoan WHERE idfb = $_SESSION[idfb]"); 
+$getTaikhoan = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM taikhoan WHERE idfb = $_SESSION[idfb]"); 
 $vnds = mysqli_fetch_array($getTaikhoan,  MYSQLI_ASSOC); 
 $vnd = $vnds['vnd']; 
 require('./incfiles/header.php'); 
 $gioihan = 300; 
 $hientai = time(); 
-$res = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM block WHERE idfb = $_SESSION[idfb]"); 
+$res = @mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM block WHERE idfb = $_SESSION[idfb]"); 
 $block = mysqli_fetch_array($res,  MYSQLI_ASSOC); 
 $dacho = $hientai - $block['thoigian']; 
 $conlai = $gioihan - $dacho; 
@@ -26,7 +26,7 @@ if($dacho < $gioihan){
     $block = 0; 
 } 
 else{ 
-    mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM block WHERE idfb = $_SESSION[idfb]"); 
+    @mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM block WHERE idfb = $_SESSION[idfb]"); 
     $block = 1; 
 } 
 ?> 

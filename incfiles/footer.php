@@ -19,14 +19,14 @@
 				<div class="col-md-6">
 					<center>
 						<div style="text-align:center">
-							<p><b>HOTLIKE.NET<br>Hệ Thống Auto Like, Bot Like, Boom Like, Sim Simi Hiện Đại Nhất Hiện Nay</b></p>
+							<p><b>BOTVN<br>Hệ Thống Auto Like, Bot Like, Boom Like, Sim Simi Hiện Đại Nhất Hiện Nay</b></p>
 							<div>
 								<a><i class="fa fa-twitter-square" style="font-size:36px;color:#000000"></i></a> &nbsp;&nbsp;
 								<a><i class="fa fa-facebook-square" style="font-size:36px;color:#000000"></i></a> &nbsp;&nbsp;
 								<a><i class="fa fa-google-plus-square" style="font-size:36px;color:#000000"></i></a> &nbsp;&nbsp;
 								<a><i class="fa fa-youtube-square" style="font-size:36px;color:#000000"></i></a><br>
-								<small>Development By <i class="fa fa-paper-plane-o"></i> HDPro.</small><br>
-								<small>© 2016 HOT-LIKE.NET</small>
+								<small>Development By <i class="fa fa-paper-plane-o"></i> Mạnh Nghĩa.</small><br>
+								<small>© 2017 BMN2312</small>
 							</div>
 						</div>
 					</center>
