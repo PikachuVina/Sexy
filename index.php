@@ -220,7 +220,7 @@ if($_GET['ref']){
 								<span style="color:red;">'.$res['ten'].'</span>
 								</td>
 								<td>
-								<span class="badge bg-green">'.$res['vnd'].'</span>
+								<span class="badge bg-green">'.$res['vnd'].' VNĐ</span>
 								</td>
 								</tr> ';
 								}
@@ -258,7 +258,7 @@ if($_GET['ref']){
 								<span style="color:red;">'.$res['ten'].'</span>
 								</td>
 								<td>
-								<span class="badge bg-green">'.$res['luotgioithieu'].'</span>
+								<span class="badge bg-green">'.$res['luotgioithieu'].' Lần</span>
 								</td>
 								</tr> ';
 								}
@@ -324,7 +324,6 @@ if($_GET['ref']){
 									<tr>
 									<th><span class="label label-primary"><i class="fa fa-image"></i> Avatar</span></th>
 									<th><span class="label label-primary"><i class="fa fa-group"></i> Tên</span></th>
-									<th><span class="label label-primary"><i class="fa fa-info"></i> Profile ID</span></th>
 									<th><span class="label label-primary"><i class="fa fa-star-half-o"></i> Tham Gia</span></th>
 									</tr>
 									</thead>
@@ -335,7 +334,6 @@ if($_GET['ref']){
 								echo'<tr><div class="col-xs-2 col-md-2">
 								<td><a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><img src="/img/new.gif"><img src="https://graph.facebook.com/'.$post[idfb].'/picture?width=10&amp;height=10" alt="'.$post[ten].'" class="img-circle img-thumbnail" width="30" height="30"></a></td>
 								<td><a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><b><font style="color: red;">'.$post[ten].'</font></b></a></td>
-								<td><a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><span class="badge bg-red">***************</span></a></td>
 								<td><span class="badge bg-yellow">'.thoigiantinhlogin($post[time]).'</span></td>
 								</div></tr>';
 								}
