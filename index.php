@@ -214,7 +214,7 @@ if($_GET['ref']){
                                 while($res = mysqli_fetch_assoc($req)) {
 								echo'<tr>
 								<td>
-								<img src="https://graph.facebook.com/'.$post[idfb].'/picture?width=10&amp;height=10" alt="'.$post[ten].'" class="img-circle img-thumbnail" width="30" height="30">
+								<img src="https://graph.facebook.com/'.$res[idfb].'/picture?width=10&amp;height=10" alt="'.$res[ten].'" class="img-circle img-thumbnail" width="30" height="30">
 								</td>
 								<td>
 								'.$res['ten'].'
@@ -228,7 +228,7 @@ if($_GET['ref']){
 								?>
 								</div>
 								<div class="box-footer">
-									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Người Dùng VIP Trên Hệ Thống.</center>
+									<center>Đây Là <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Đại Gia Giàu Nhất Website.</center>
 								</div>
 							</div>				
 						</div>
@@ -252,7 +252,7 @@ if($_GET['ref']){
                                 while($res = mysqli_fetch_assoc($req)) {
 								echo'<tr>
 								<td>
-								<img src="https://graph.facebook.com/'.$post[idfb].'/picture?width=10&amp;height=10" alt="'.$post[ten].'" class="img-circle img-thumbnail" width="30" height="30">
+								<img src="https://graph.facebook.com/'.$res[idfb].'/picture?width=10&amp;height=10" alt="'.$res[ten].'" class="img-circle img-thumbnail" width="30" height="30">
 								</td>
 								<td>
 								'.$res['ten'].'
@@ -266,7 +266,7 @@ if($_GET['ref']){
 								?>
 								</div>
 								<div class="box-footer">
-									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Người Dùng VIP Trên Hệ Thống.</center>
+									<center>Đây Là <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Thành Viên Ưu Tú Quảng Cáo Website.</center>
 								</div>
 							</div>				
 						</div>
