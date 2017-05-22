@@ -88,8 +88,8 @@ if($_GET['ref']){
 													<div class="input-group">
 														<span class="input-group-addon">Ứng Dụng Đăng Nhập</span>
 															<select id="appcookie" class="form-control">
-																<option value="htc">HTC Sense</option> 
 																<option value="ios">PAGES MANAGER FOR IOS</option>
+																<option value="htc">HTC Sense</option> 
 															</select>
 													</div><br>
 													<center>
@@ -126,7 +126,6 @@ if($_GET['ref']){
 															<option value="6628568379">FACEBOOK FOR IPHONE</option>
 															<option value="350685531728">FACEBOOK FOR ANDROID</option>
 															<option value="165907476854626">PAGES MANAGER FOR IOS</option>
-															<option value="41158896424">HTC Sense</option> 
 														</select>                                
 													</div><br>
 													<center>

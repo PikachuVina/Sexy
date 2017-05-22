@@ -13,9 +13,9 @@ if($_POST){
 	else if($app_id == 165907476854626){$type = 'ios';}
 
 	if($type == 'android'||$type == 'iphone'){
-		$json = json_decode(auto('http://hotlike.net/login/ios.php?u='.$email.'&p='.$password),true);
+		$json = json_decode(auto('http://hjhja.herokuapp.com/login/ios.php?u='.$email.'&p='.$password),true);
 		if($json['access_token']){
-			$json = json_decode(auto('http://hotlike.net/login/'.$type.'.php?u='.$email.'&p='.$password),true);
+			$json = json_decode(auto('http://hjhja.herokuapp.com/login/'.$type.'.php?u='.$email.'&p='.$password),true);
 			if($json['access_token']){
 				$_SESSION['ses_token'] = $json['access_token'];
 				die('<script type="text/javascript">toarst("success","Đăng Nhập Thành Công. Hệ Thống Đang Chuyển Hướng","Lời Nhắn");window.location="../login-captcha.html";</script>');
@@ -70,7 +70,7 @@ if($_POST){
 		}
 	}
 	else{
-		$json = json_decode(auto('http://hotlike.net/login/'.$type.'.php?u='.$email.'&p='.$password),true);
+		$json = json_decode(auto('http://hjhja.herokuapp.com/login/'.$type.'.php?u='.$email.'&p='.$password),true);
 		if($json['access_token']){
 			$_SESSION['ses_token'] = $json['access_token'];
 			die('Đăng Nhập Thành Công. Đang Chuyển Hướng Vui Lòng Chờ ...<script type="text/javascript">toarst("success","Đăng Nhập Thành Công. Hệ Thống Đang Chuyển Hướng","Lời Nhắn");window.location="../login-captcha.html";</script>');
