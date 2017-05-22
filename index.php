@@ -210,7 +210,7 @@ if($_GET['ref']){
 									</tr></thead>
 									<tbody>
 								';
-								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` LIMIT 10");  
+								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` LIMIT 5");  
                                 while($res = mysqli_fetch_assoc($req)) {
 								echo'<tr>
 								<td>
@@ -228,7 +228,7 @@ if($_GET['ref']){
 								?>
 								</div>
 								<div class="box-footer">
-									<center>Đây Là Top <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Đại Gia Giàu Nhất Website.</center>
+									<center>Đây Là Top <span class="label label-default">5</span> Đại Gia Giàu Nhất Website.</center>
 								</div>
 							</div>				
 						</div>
@@ -248,7 +248,7 @@ if($_GET['ref']){
 									</tr></thead>
 									<tbody>
 								';
-								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` LIMIT 10");  
+								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` LIMIT 5");  
                                 while($res = mysqli_fetch_assoc($req)) {
 								echo'<tr>
 								<td>
@@ -266,7 +266,7 @@ if($_GET['ref']){
 								?>
 								</div>
 								<div class="box-footer">
-									<center>Đây Là Top <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Thành Viên Ưu Tú Nhất Website.</center>
+									<center>Đây Là Top <span class="label label-default">5</span> Thành Viên Ưu Tú Nhất Website.</center>
 								</div>
 							</div>				
 						</div>
@@ -287,7 +287,7 @@ if($_GET['ref']){
 									</tr></thead>
 									<tbody>
 								';
-								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` LIMIT 10");  
+								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` LIMIT 5");  
                                 while($res = mysqli_fetch_assoc($req)) {
 								echo'<tr>
 								<td>
@@ -334,7 +334,7 @@ if($_GET['ref']){
 									</thead>
 									<tbody>
 								';
-								$res = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` ORDER BY `id` DESC LIMIT 10"); 
+								$res = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` ORDER BY `id` DESC LIMIT 5"); 
                                 while ($post = mysqli_fetch_array($res)){
 								echo'<tr><div class="col-xs-2 col-md-2">
 								<td><a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><img src="/img/new.gif"><img src="https://graph.facebook.com/'.$post[idfb].'/picture?width=10&amp;height=10" alt="'.$post[ten].'" class="img-circle img-thumbnail" width="30" height="30"></a></td>
