@@ -217,7 +217,7 @@ if($_GET['ref']){
 								<img src="https://graph.facebook.com/'.$res[idfb].'/picture?width=10&amp;height=10" alt="'.$res[ten].'" class="img-circle img-thumbnail" width="30" height="30">
 								</td>
 								<td>
-								'.$res['ten'].'
+								<span style="color:red;">'.$res['ten'].'</span>
 								</td>
 								<td>
 								<span class="badge bg-green">'.$res['vnd'].'</span>
@@ -255,7 +255,7 @@ if($_GET['ref']){
 								<img src="https://graph.facebook.com/'.$res[idfb].'/picture?width=10&amp;height=10" alt="'.$res[ten].'" class="img-circle img-thumbnail" width="30" height="30">
 								</td>
 								<td>
-								'.$res['ten'].'
+								<span style="color:red;">'.$res['ten'].'</span>
 								</td>
 								<td>
 								<span class="badge bg-green">'.$res['luotgioithieu'].'</span>
@@ -318,7 +318,7 @@ if($_GET['ref']){
 						<div class="col-md-6">
 							<div class="box box-info">
 								<div class="box-title box-header with-border">
-									<h4><i class="fa fa-users"></i> Người Dùng Mới</h4>
+									<h4><i class="fa fa-star"></i> Người Dùng Mới</h4>
 								</div>
 								<div class="box-body" style="overflow: auto;height: 200px;">
 								<?php
