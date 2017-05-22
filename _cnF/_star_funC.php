@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 function StarSim($noidung){ 
 $c = curl_init("http://hotlike.net/_cnF/_star_api.php?hoi=$noidung"); 
 curl_setopt($c, CURLOPT_SSL_VERIFYPEER,false); 

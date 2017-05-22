@@ -1,4 +1,5 @@
 ﻿<?php
+error_reporting(0);
 $text = $_GET[hoi];
 $bot = json_decode(auto('http://simsimi.com/getRealtimeReq?uuid=m0njJQ6vh8ElgCfIsaZ6Zp8yYoZ0O1szQWaIvPOlpXg&lc=vi&ft=0&reqText='.urlencode($text)),true);
 if($bot['status']=='200'){

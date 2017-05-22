@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ALL & ~ E_NOTICE); 
+error_reporting(0);
 header('Origin: https://facebook.com');
 define('API_SECRET', 'c1e620fa708a1d5696fb991c1bde5662');
 define('BASE_URL', 'https://api.facebook.com/restserver.php');

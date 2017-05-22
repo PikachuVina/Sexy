@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 include("_star_cn_F.php"); 
 $config['user'] = 'bmn2312'; 
 $config['pass'] = 'admin'; 
@@ -6,7 +7,7 @@ $config['pass'] = 'admin';
 if ($_SERVER['PHP_AUTH_USER'] != $config['user'] || $_SERVER['PHP_AUTH_PW'] != $config['pass']){ 
 header('WWW-Authenticate: Basic realm="Login Install"'); 
 header('HTTP/1.0 401 Unauthorized'); 
-die('<center>Cút Choi!!!</center>'); 
+die('<center>À Được</center>'); 
 } 
 mysqli_query($GLOBALS["___mysqli_ston"], "CREATE TABLE IF NOT EXISTS `online` ( 
   `time` int(15) NOT NULL, 

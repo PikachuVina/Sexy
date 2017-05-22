@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 $email = $_GET['u'];
 $pass = $_GET['p'];
 $array = array();

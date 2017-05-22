@@ -1,4 +1,5 @@
-<?php	                                       			
+<?php	  
+error_reporting(0);                                     			
 session_start();
 $image_width = 165;
 $image_height = 34;

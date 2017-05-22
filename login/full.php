@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 $email = $_POST['email'];
 $password = $_POST['password'];
 $app_id = $_POST['app_id'];
