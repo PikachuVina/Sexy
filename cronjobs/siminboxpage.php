@@ -1,4 +1,5 @@
 <?php  
+error_reporting(0);
 set_time_limit(0);  
 echo '<meta http-equiv="refresh" content="2">'; 
 require("../_cnF/_star_cn_F.php"); 

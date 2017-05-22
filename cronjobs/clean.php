@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 set_time_limit(0);  
 include'../_cnF/_star_cn_F.php'; 
 echo mysqli_query($GLOBALS["___mysqli_ston"], "DELETE FROM logbottralike;").'<br />'; 

@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 set_time_limit(0);
 ob_start('ob_gzhandler');
 date_default_timezone_set("Asia/Ho_Chi_Minh");

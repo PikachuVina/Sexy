@@ -1,4 +1,4 @@
-<?php 
+<?php error_reporting(0);
 set_time_limit(0); 
 ob_start('ob_gzhandler'); 
 require("../_cnF/_star_cn_F.php"); 

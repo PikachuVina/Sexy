@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
 set_time_limit(0); 
 require("../_cnF/_star_cn_F.php"); 
 $result = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM bottralike ORDER BY RAND() LIMIT 0,5"); 
