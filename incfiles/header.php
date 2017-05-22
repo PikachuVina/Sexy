@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi-VN">
 	<head>
-		<title>AUTOLIKE | BOTLIKE | BOOMLIKE | SIMSIMI | VIPLIKE | <?=$text['linkvh'];?></title>
+		<title>AUTOLIKE | BOTLIKE | BOOMLIKE | SIMSIMI | VIPLIKE | <?=$text['vtat'];?></title>
 		<meta charset="utf-8" />
-		<meta name="description" content="<?=$text['linkvh'];?> - Hệ Thống Auto Like, Bot Like, Boom Like, Sim Simi Hiện Đại Nhất Hiện Nay" />
+		<meta name="description" content="<?=$text['vtat'];?> - Hệ Thống Auto Like, Bot Like, Boom Like, Sim Simi Hiện Đại Nhất Hiện Nay" />
 		<meta name="keywords" content="tang like, hack like facebook, buff like, auto cam xuc , bot cam xuc , bot like , bot ex like , hack like viet nam, <?=$text['link'];?>, trang web hack like facebook, auto like viet nam, buff like viet nam,cách tăng like stt facebook, hack like ảnh facebook, auto cam xuc , bot cam xuc , bot like , bot ex like  hack like comment facebook, tăng like ảnh facebook, cách hack tăng like,share code auto like, xin code auto like, web auto like, auto sub , auto share , hack share , hack comments , hack bình luận, auto like sub , đọc trộm tin nhắn facebook , xem tin nhắn facebook không cần mật khẩu " />
-		<meta name="author" content="Trung Hậu" />
-		<meta name="copyright" content="Copyright © 2016 Trung Hậu" />
+		<meta name="author" content="BMN2312" />
+		<meta name="copyright" content="Copyright © 2017 BMN2312" />
 		<meta name="robots" content="index, follow" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta http-equiv="content-type" content="text/html; UTF-8" />
@@ -15,16 +15,16 @@
 		<meta http-equiv="revisit-after" content="1 days" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="geo.region" content="VN" />
-		<meta name="geo.placename" content="TP.Hồ Chí Minh" />
+		<meta name="geo.placename" content="Hà Nội" />
 		<meta name="google-site-verification" content="X7RXHrHGGl2pUhGKQTNqPxHluEpYGhShLDUX7lCyr2k" />
 		<meta name="google-translate-customization" content="cf71270cf62d50cb-4e3fbed6dada40a9-gc44146233a047483-b" />
 		<meta name="detectify-verification" content="a2d8cdb86af5352ff7f7da736642689d" />
 		<meta property="og:url" content="<?=$text['link'];?>" />
 		<meta property="og:type" content="website" />
-		<meta property="og:description" content="<?=$text['linkvh'];?>|AUTOLIKE|BOTLIKE|BOOMLIKE|SIMSIMI|VIPLIKE - Còn Rât Nhiều Chức Năng Mà Bạn Chưa Ngờ Đến, Hãy Truy Cập Ngay Hôm Nay Để Nhận Nhiều Niềm Vui Nào" />
+		<meta property="og:description" content="<?=$text['vtat'];?>|AUTOLIKE|BOTLIKE|BOOMLIKE|SIMSIMI|VIPLIKE - Còn Rât Nhiều Chức Năng Mà Bạn Chưa Ngờ Đến, Hãy Truy Cập Ngay Hôm Nay Để Nhận Nhiều Niềm Vui Nào" />
 		<meta property="og:image" content="https://mir-cdn.behance.net/v1/rendition/project_modules/disp/e4299734559659.56d57de04bda4.gif" />
 		<meta property="og:locale" content="vi_VN" />
-		<meta property="article:author" content="Trung Hậu" />
+		<meta property="article:author" content="BMN2312" />
 		<meta property="article:publisher" content="https://www.facebook.com/system.hdpro" />
 		<link rel="shortcut icon" href="./img/icon.png" type="image/x-icon" />
 		<link rel="stylesheet" href="./code/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
@@ -35,7 +35,6 @@
 		<link rel="stylesheet" href="./code/toastr.css" />
 		<link rel="stylesheet" href="./code/emoji.css" />
 		<link rel="stylesheet" href="./code/chat.css" />
-		<link rel="stylesheet" href="./code/DinhDau.css" />
 		<script type="text/javascript" src="./code/toastr.min.js"></script>
 		<script type="text/javascript" src="./code/app.js"></script>
 		<!--
@@ -226,7 +225,7 @@
 						<li class="treeview">
 							<a style="color:red;"><i class="fa fa-link"></i> <span class="nav-label">LIÊN KẾT</span><i class="fa fa-angle-left pull-right"></i></a>
 							<ul class="treeview-menu">
-								<li><a href="http://starvip.info">STARVIP.INFO</a></li>
+								<li><a href="#">Nothing</a></li>
 							</ul>	
 						</li>
 						<li class="treeview">

@@ -31,9 +31,9 @@ if($_GET['ref']){
 										Hoặc Tăng Like Cho Status Của Bạn, Giúp Tăng Độ Tương Tác Của Bạn Với Bạn Bè.<br>
 										Hệ Thống Của Chúng Tôi Tự Động Hóa Một Cách Hoàn Toàn Giúp Bạn Yên Tâm Hơn,<br>
 										Và Không Phải Lo Điều Gì Cho Tài Khoản Của Bạn.<br>
-										<b>Hãy Theo Dõi Hậu Để Cập Nhật Những Thông Tin Mới Nhất Nhé.</b>
+										<b>Hãy Theo Dõi Nghĩa Để Cập Nhật Những Thông Tin Mới Nhất Nhé.</b>
 									</p>
-									<iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2Fsystem.hdpro&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=500&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden;width: 450px; height:35px;" allowTransparency="true"></iframe>
+									<iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2Fbmn2312&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=500&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden;width: 450px; height:35px;" allowTransparency="true"></iframe>
 								</div>
 							</div>				
 						</div>
