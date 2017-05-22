@@ -1,7 +1,7 @@
 <?php 
 session_start(); 
 $text = array( 
-'linkvh' => 'BOTVN', 
+'linkvh' => 'Auto Facebook', 
 'vh' => 'BOTVN', 
 'vtat' => 'BotVN', 
 'link' => 'http://hjhja.herokuapp.com', 
