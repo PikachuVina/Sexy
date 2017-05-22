@@ -3,10 +3,6 @@
      <div class="box box-success">
 	  <div class="box-title box-header with-border">
 	       <h4><i class="fa fa-book"></i> MENU <?=$text['vh'];?></h4>
-                    <div class="box-tools pull-right">
-                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                         <!--<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>-->
-                    </div>
 	  </div>
 	  <div class="box-body">
 	       <div id="back"></div>
@@ -473,10 +469,6 @@
                     <i class="fa fa-star"></i> 
                     Người Dùng Vip
                     </h4>
-                    <div class="box-tools pull-right">
-                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                         <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
 	       </div>
 	       <div class="box-body" style="overflow: auto;height: 185px;">
 		    <?php
@@ -510,10 +502,6 @@
                     <i class="fa fa-users"></i> 
                     Người Dùng Mới
                     </h4>
-                    <div class="box-tools pull-right">
-                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                         <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-                    </div>
 	       </div>
 	       <div class="box-body" style="overflow: auto;height: 185px;">
 					<?php

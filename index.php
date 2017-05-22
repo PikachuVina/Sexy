@@ -41,9 +41,6 @@ if($_GET['ref']){
 							<div class="box box-success">
 								<div class="box-title box-header with-border">
 									<h4><i class="fa fa-yelp"></i> Đăng Nhập Hệ Thống</h4>
-									<div class="box-tools pull-right">
-										<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-									</div>
 								</div>
 								<div class="box-body">
 									<div class="tabs-container">
@@ -201,10 +198,6 @@ if($_GET['ref']){
 							<div class="box box-primary">
 								<div class="box-title box-header with-border">
 									<h4><i class="fa fa-star"></i> Người Dùng Vip</h4>
-									<div class="box-tools pull-right">
-										<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-										<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-									</div>
 								</div>
 								<div class="box-body" style="overflow: auto;height: 200px;">
 								<?php
@@ -250,10 +243,6 @@ if($_GET['ref']){
 							<div class="box box-info">
 								<div class="box-title box-header with-border">
 									<h4><i class="fa fa-users"></i> Người Dùng Mới</h4>
-									<div class="box-tools pull-right">
-										<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-										<button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-									</div>
 								</div>
 								<div class="box-body" style="overflow: auto;height: 200px;">
 								<?php

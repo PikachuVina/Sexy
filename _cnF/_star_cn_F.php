@@ -1,9 +1,9 @@
 <?php 
 session_start(); 
 $text = array( 
-'linkvh' => 'hjhja.herokuapp.com', 
-'vh' => 'HOTLIKE', 
-'vtat' => 'HL', 
+'linkvh' => 'BOTVN', 
+'vh' => 'BOTVN', 
+'vtat' => 'BotVN', 
 'link' => 'http://hjhja.herokuapp.com', 
 ); 
 
