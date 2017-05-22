@@ -281,7 +281,6 @@ if($_GET['ref']){
 									<table class=table>
 									<thead><tr>
 									<th><span class="label label-primary"><i class="fa fa-group"></i> Tên</span></th>
-									<th><span class="label label-primary"><i class="fa fa-info"></i> Profile ID</span></th>
 									<th><span class="label label-primary"><i class="fa fa-calendar-check-o"></i> Hạn</span></th>
 									<th><span class="label label-primary"><i class="fa fa-star-half-o"></i> Level</span></th>
 									</tr></thead>
@@ -292,9 +291,6 @@ if($_GET['ref']){
 								echo'<tr>
 								<td>
 								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)" style="color: red;"><img src="/img/vip.gif"><b>'.$res['ten'].'</b></a>
-								</td>
-								<td>
-								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><span class="badge bg-red">***************</span></a>
 								</td>
 								<td>
 								<span class="badge bg-green">'.thoigiantinhvip($res['time']).'</span>
