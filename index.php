@@ -18,10 +18,7 @@ if($_GET['ref']){
 						<div class="col-md-12">
 							<div class="box box-info">
 								<div class="box-title box-header with-border">
-									<h4><i class="fa fa-info-circle fa-fw"></i> THÔNG TIN <?=$text['linkvh'];?></h4>
-									<div class="box-tools pull-right">
-										<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-									</div>
+									<h4><i class="fa fa-info-circle fa-fw"></i> THÔNG TIN</h4>
 								</div>
 								<div class="box-body">
 									<p>
