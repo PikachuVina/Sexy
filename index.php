@@ -15,7 +15,7 @@ if($_GET['ref']){
 	$_SESSION['refn'] = $name;	
 }
 ?>
-						<div class="col-md-7">
+						<div class="col-md-12">
 							<div class="box box-info">
 								<div class="box-title box-header with-border">
 									<h4><i class="fa fa-info-circle fa-fw"></i> THÔNG TIN <?=$text['linkvh'];?></h4>
@@ -37,40 +37,6 @@ if($_GET['ref']){
 										<b>Hãy Theo Dõi Hậu Để Cập Nhật Những Thông Tin Mới Nhất Nhé.</b>
 									</p>
 									<iframe src="//www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2Fsystem.hdpro&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=500&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden;width: 450px; height:35px;" allowTransparency="true"></iframe>
-								</div>
-							</div>				
-						</div>
-						<div class="col-md-5">
-							<div class="box box-info">
-								<div class="box-title box-header with-border">
-									<h4><i class="fa fa-info-circle fa-fw"></i> HỖ TRỢ - LIÊN HỆ</h4>
-									<div class="box-tools pull-right">
-										<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-									</div>
-								</div>
-								<div class="box-body">
-									<div id="carousel-example-generic" class="carousel slide" data-interval="3000" data-ride="carousel">
-										<div class="carousel-inner" role="listbox">
-											<div class="item">
-												<center>
-													<img class="img-circle img-thumbnail img-thumbnail-avatar-2x" src="https://graph.facebook.com/100006716972752/picture?width=50&amp;height=50" alt="Avatar"><br>
-													Quản Lý: <b style="color:red;">Trung Hậu</b><br>
-													Liên Hệ: <a class="btn btn-primary btn-xs" href="https://www.facebook.com/system.hdpro" target="_blank"><i class="fa fa-external-link"></i> Facebook</a><br><br>
-													<a class="btn btn-block btn-primary" href="https://www.facebook.com/messages/100006716972752" target="_blank"><i class="fa fa-external-link"></i> Yêu Cầu Hỗ Trợ</a>
-													<a class="btn btn-block btn-warning" data-toggle="modal" data-target="#huongdan"><i class="fa fa-question"></i> Hướng Dẫn Sử Dụng</a><br>
-												</center>
-											</div>
-											<div class="item active">
-												<center>
-													<img class="img-circle img-thumbnail img-thumbnail-avatar-2x" src="https://graph.facebook.com/100006716972752/picture?width=50&amp;height=50" alt="Avatar"><br>
-													Quản Lý: <b style="color:red;">Trung Hậu</b><br>
-													Liên Hệ: <a class="btn btn-primary btn-xs" href="https://www.facebook.com/system.hdpro" target="_blank"><i class="fa fa-external-link"></i> Facebook</a><br><br>
-													<a class="btn btn-block btn-primary" href="https://www.facebook.com/messages/100006716972752" target="_blank"><i class="fa fa-external-link"></i> Yêu Cầu Hỗ Trợ</a>
-													<a class="btn btn-block btn-warning" data-toggle="modal" data-target="#huongdan"><i class="fa fa-question"></i> Hướng Dẫn Sử Dụng</a><br>
-												</center>
-											</div>
-										</div>
-									</div>
 								</div>
 							</div>				
 						</div>
