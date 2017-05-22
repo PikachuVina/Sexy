@@ -214,24 +214,21 @@ if($_GET['ref']){
                                 while($res = mysqli_fetch_assoc($req)) {
 								echo'<tr>
 								<td>
-								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)" style="color: red;"><img src="/img/vip.gif"><b>'.$res['ten'].'</b></a>
+								<img src="https://graph.facebook.com/'.$post[idfb].'/picture?width=10&amp;height=10" alt="'.$post[ten].'" class="img-circle img-thumbnail" width="30" height="30">
 								</td>
 								<td>
-								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><span class="badge bg-red">***************</span></a>
+								'.$res['ten'].'
 								</td>
 								<td>
-								<span class="badge bg-green">'.thoigiantinhvip($res['time']).'</span>
-								</td>
-								<td>
-								<span class="badge bg-yellow">';
-								if($res['level'] == '1'){ echo 'VIP Member'; }elseif($res['level'] == '2'){  echo 'Medium Member'; 
-								}elseif($res['level'] == '3'){ echo 'Super Member';}else{ echo 'Boss Member';}
-								echo '</span>
+								<span class="badge bg-green">'.$res['vnd'].'</span>
 								</td>
 								</tr> ';
 								}
 								echo'</tbody></table>';
 								?>
+								</div>
+								<div class="box-footer">
+									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Người Dùng VIP Trên Hệ Thống.</center>
 								</div>
 							</div>				
 						</div>
@@ -251,23 +248,17 @@ if($_GET['ref']){
 									</tr></thead>
 									<tbody>
 								';
-								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` LIMIT 10");  
+								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` LIMIT 10");  
                                 while($res = mysqli_fetch_assoc($req)) {
 								echo'<tr>
 								<td>
-								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)" style="color: red;"><img src="/img/vip.gif"><b>'.$res['ten'].'</b></a>
+								<img src="https://graph.facebook.com/'.$post[idfb].'/picture?width=10&amp;height=10" alt="'.$post[ten].'" class="img-circle img-thumbnail" width="30" height="30">
 								</td>
 								<td>
-								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><span class="badge bg-red">***************</span></a>
+								'.$res['ten'].'
 								</td>
 								<td>
-								<span class="badge bg-green">'.thoigiantinhvip($res['time']).'</span>
-								</td>
-								<td>
-								<span class="badge bg-yellow">';
-								if($res['level'] == '1'){ echo 'VIP Member'; }elseif($res['level'] == '2'){  echo 'Medium Member'; 
-								}elseif($res['level'] == '3'){ echo 'Super Member';}else{ echo 'Boss Member';}
-								echo '</span>
+								<span class="badge bg-green">'.$res['luotgioithieu'].'</span>
 								</td>
 								</tr> ';
 								}
