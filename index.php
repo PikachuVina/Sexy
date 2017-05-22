@@ -244,7 +244,7 @@ if($_GET['ref']){
 									<thead><tr>
 									<th><span class="label label-primary"><i class="fa fa-image"></i> Avatar</span></th>
 									<th><span class="label label-primary"><i class="fa fa-group"></i> Name</span></th>
-									<th><span class="label label-primary"><i class="fa fa-calendar-check-o"></i> Lượt Giới Thiệu</span></th>
+									<th><span class="label label-primary"><i class="fa fa-calendar-check-o"></i> Giới Thiệu</span></th>
 									</tr></thead>
 									<tbody>
 								';
