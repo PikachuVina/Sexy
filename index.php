@@ -197,6 +197,91 @@ if($_GET['ref']){
 						<div class="col-md-6">
 							<div class="box box-primary">
 								<div class="box-title box-header with-border">
+									<h4><i class="fa fa-star"></i> Top Đại Gia</h4>
+								</div>
+								<div class="box-body" style="overflow: auto;height: 200px;">
+								<?php
+								echo'
+									<table class=table>
+									<thead><tr>
+									<th><span class="label label-primary"><i class="fa fa-image"></i> Avatar</span></th>
+									<th><span class="label label-primary"><i class="fa fa-group"></i> Name</span></th>
+									<th><span class="label label-primary"><i class="fa fa-money"></i> Tài Khoản</span></th>
+									</tr></thead>
+									<tbody>
+								';
+								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `taikhoan` LIMIT 10");  
+                                while($res = mysqli_fetch_assoc($req)) {
+								echo'<tr>
+								<td>
+								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)" style="color: red;"><img src="/img/vip.gif"><b>'.$res['ten'].'</b></a>
+								</td>
+								<td>
+								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><span class="badge bg-red">***************</span></a>
+								</td>
+								<td>
+								<span class="badge bg-green">'.thoigiantinhvip($res['time']).'</span>
+								</td>
+								<td>
+								<span class="badge bg-yellow">';
+								if($res['level'] == '1'){ echo 'VIP Member'; }elseif($res['level'] == '2'){  echo 'Medium Member'; 
+								}elseif($res['level'] == '3'){ echo 'Super Member';}else{ echo 'Boss Member';}
+								echo '</span>
+								</td>
+								</tr> ';
+								}
+								echo'</tbody></table>';
+								?>
+								</div>
+							</div>				
+						</div>
+						<div class="col-md-6">
+							<div class="box box-primary">
+								<div class="box-title box-header with-border">
+									<h4><i class="fa fa-star"></i> Top Giới Thiệu</h4>
+								</div>
+								<div class="box-body" style="overflow: auto;height: 200px;">
+								<?php
+								echo'
+									<table class=table>
+									<thead><tr>
+									<th><span class="label label-primary"><i class="fa fa-image"></i> Avatar</span></th>
+									<th><span class="label label-primary"><i class="fa fa-group"></i> Name</span></th>
+									<th><span class="label label-primary"><i class="fa fa-calendar-check-o"></i> Lượt Giới Thiệu</span></th>
+									</tr></thead>
+									<tbody>
+								';
+								$req = mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` LIMIT 10");  
+                                while($res = mysqli_fetch_assoc($req)) {
+								echo'<tr>
+								<td>
+								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)" style="color: red;"><img src="/img/vip.gif"><b>'.$res['ten'].'</b></a>
+								</td>
+								<td>
+								<a onclick="toarst(&quot;error&quot;,&quot;Vui Lòng Đăng Nhập Để Thực Hiện Tính Năng Này.&quot;,&quot;Tin Nhắn Hệ Thống&quot;)"><span class="badge bg-red">***************</span></a>
+								</td>
+								<td>
+								<span class="badge bg-green">'.thoigiantinhvip($res['time']).'</span>
+								</td>
+								<td>
+								<span class="badge bg-yellow">';
+								if($res['level'] == '1'){ echo 'VIP Member'; }elseif($res['level'] == '2'){  echo 'Medium Member'; 
+								}elseif($res['level'] == '3'){ echo 'Super Member';}else{ echo 'Boss Member';}
+								echo '</span>
+								</td>
+								</tr> ';
+								}
+								echo'</tbody></table>';
+								?>
+								</div>
+								<div class="box-footer">
+									<center>Hiện Tại Có <span class="label label-default"><?php echo mysqli_num_rows(mysqli_query($GLOBALS["___mysqli_ston"], "SELECT * FROM `vip` ORDER BY RAND()")); ?></span> Người Dùng VIP Trên Hệ Thống.</center>
+								</div>
+							</div>				
+						</div>
+						<div class="col-md-6">
+							<div class="box box-primary">
+								<div class="box-title box-header with-border">
 									<h4><i class="fa fa-star"></i> Người Dùng Vip</h4>
 								</div>
 								<div class="box-body" style="overflow: auto;height: 200px;">
