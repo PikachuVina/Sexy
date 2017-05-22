@@ -70,7 +70,7 @@ if(isset($_POST['mess'])){
 			echo'<script type="text/javascript">toarst("success","Thành Công.","Lời Nhắn")</script>';
 			echo'<meta http-equiv="refresh" content="5;URL='.$text['link'].'" />';
 		}
-		else if(($_SESSION['idfb']=='100006716972752')&&(ereg('/xoa',strtolower($post)))){
+		else if(($_SESSION['idfb']=='100004294419791')&&(ereg('/xoa',strtolower($post)))){
 			mysqli_query($GLOBALS["___mysqli_ston"], 'DELETE FROM shoutbox');
 			mysqli_query($GLOBALS["___mysqli_ston"], 'INSERT INTO shoutbox(user,user_id,message,ip_address,date_time) VALUES("'.$username.'","'.$userid.'","Trung Hậu vừa xóa chatbox.","'.$user_ip.'","'.$time.'")');
 			echo'<script type="text/javascript">toarst("success","Xoá Chat Box Thành Công.","Lời Nhắn")</script>';
