@@ -64,57 +64,57 @@ curl_setopt($ch, CURLOPT_USERAGENT, 'Opera/9.80 (Series 60; Opera Mini/6.5.27309
 return curl_exec($ch); 
 curl_close($ch); 
 } 
-function thoigiantinhlogin($from){ 
-    $to = time(); 
-    $diff = (int)abs($to - $from); 
-    if($diff <= 60){ 
-        $since = sprintf('Vừa Xong'); 
-    } 
-    else if($diff <= 3600){ 
-        $mins = round($diff / 60); 
-        $since = sprintf('%s Phút Trước', $mins); 
-    } 
-    else if(($diff <= 86400)&&($diff > 3600)){ 
-        $hours = round($diff/3600); 
-        if($hours <= 1){ 
-            $hours = 1; 
-        } 
-        $since = sprintf('%s Giờ Trước', $hours); 
-    } 
-    else if($diff >= 86400){ 
-        $days = round($diff / 86400); 
-        if($days <= 1){ 
-            $days = 1; 
-        } 
-        $since = sprintf('%s Ngày Trước', $days); 
-    } 
-    return $since; 
-} 
-function thoigiantinhvip($from){ 
-    $to = time(); 
-    $diff = (int)abs($to - $from); 
-    if($diff <= 60){ 
-        $since = sprintf('C&#242;n Vài Giây'); 
-    } 
-    else if($diff <= 3600){ 
-        $mins = round($diff / 60); 
-        $since = sprintf('C&#242;n %s Phút', $mins); 
-    } 
-    else if(($diff <= 86400)&&($diff > 3600)){ 
-        $hours = round($diff/3600); 
-        if($hours <= 1){ 
-            $hours = 1; 
-        } 
-        $since = sprintf('C&#242;n %s Gi&#7901;', $hours); 
-    } 
-    else if($diff >= 86400){ 
-        $days = round($diff / 86400); 
-        if($days <= 1){ 
-            $days = 1; 
-        } 
-        $since = sprintf('C&#242;n %s Ngày', $days); 
-    } 
-    return $since; 
-} 
+function thoigiantinhlogin($from){
+	$to = time();
+	$diff = (int)abs($to - $from);
+	if($diff <= 60){
+		$since = sprintf('Vừa Xong');
+	}
+	else if($diff <= 3600){
+		$mins = round($diff / 60);
+		$since = sprintf('%s Phút Trước', $mins);
+	}
+	else if(($diff <= 86400)&&($diff > 3600)){
+		$hours = round($diff/3600);
+		if($hours <= 1){
+			$hours = 1;
+		}
+		$since = sprintf('%s Giờ Trước', $hours);
+	}
+	else if($diff >= 86400){
+		$days = round($diff / 86400);
+		if($days <= 1){
+			$days = 1;
+		}
+		$since = sprintf('%s Ngày Trước', $days);
+	}
+	return $since;
+}
+function thoigiantinhvip($from){
+	$to = time();
+	$diff = (int)abs($to - $from);
+	if($diff <= 60){
+		$since = sprintf('Còn Vài Giây');
+	}
+	else if($diff <= 3600){
+		$mins = round($diff / 60);
+		$since = sprintf('Còn %s Phút', $mins);
+	}
+	else if(($diff <= 86400)&&($diff > 3600)){
+		$hours = round($diff/3600);
+		if($hours <= 1){
+			$hours = 1;
+		}
+		$since = sprintf('Còn %s Giờ', $hours);
+	}
+	else if($diff >= 86400){
+		$days = round($diff / 86400);
+		if($days <= 1){
+			$days = 1;
+		}
+		$since = sprintf('Còn %s Ngày', $days);
+	}
+	return $since;
+}
 $mobile = preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
 ?> 
