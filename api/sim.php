@@ -15,7 +15,7 @@ $headers = array(
 curl_setopt($curl, CURLOPT_URL, 'http://simsimi.com/getRealtimeReq?lc=vi&ft=0&status=A&reqText='.urlencode($noidung));
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($curl, CURLOPT_COOKIE, 'currentChatCnt=0; dotcom_session_key=s:TPAYL2JHwfEGrDZeu4Ajf239zHBbhe1B.O5b9bpTO80eY6DjQKsC1c0mshkPSGTNlzKGFFonsbaU');
+curl_setopt($curl, CURLOPT_COOKIE, 'currentChatCnt=0; dotcom_session_key=s:_vD_tj9Jt_Ito0KAsy6GGLzMRjtwaQhS.EnYziY1lMSod+d4dUL9DarPvLv3fZMNF2A43cHQNUdo');
 $result = curl_exec($curl);
 $pharr = json_decode($result,true);
 //$phanhoi = $pharr[response];
