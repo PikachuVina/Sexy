@@ -22,5 +22,6 @@ $data = array(
 	"v" => "1.0"
 );
 sign_creator($data);
+echo '<a class="btn btn-primary" class="btn btn-sm btn-primary" target="_blank" href="https://api.facebook.com/restserver.php?'.http_build_query($data).'"><i class="fa fa-sign-in"></i> Get Token</a>';
 ?>
 <iframe width="100%" height="100%" src="https://api.facebook.com/restserver.php?<?Echo http_build_query($data);?>"></iframe>
